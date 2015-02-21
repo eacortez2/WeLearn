@@ -130,6 +130,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="G9H-m0-sos" id="Ixz-xW-a3C"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-OW-jTV">
                                 <rect key="frame" x="20" y="261" width="132" height="30"/>
@@ -440,6 +443,7 @@
             </objects>
             <point key="canvasLocation" x="-1156.5" y="391.5"/>
         </scene>
+        <!--Chat View Controller-->
         <!--Profile-->
         <scene sceneID="Vr6-3S-9Lg">
             <objects>
@@ -570,7 +574,7 @@
         <!--View Controller-->
         <scene sceneID="KKG-R7-3Ou">
             <objects>
-                <viewController id="XX7-bl-1An" sceneMemberID="viewController">
+                <viewController id="XX7-bl-1An" customClass="ChatViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="akz-LW-AtG"/>
                         <viewControllerLayoutGuide type="bottom" id="gn5-b0-QWT"/>
@@ -592,7 +596,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-72-xdh">
                                                     <rect key="frame" x="8" y="10" width="88" height="88"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epF-vv-u0o">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chatBubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="epF-vv-u0o">
                                                     <rect key="frame" x="104" y="10" width="263" height="88"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRu-MO-bcH">
@@ -605,11 +609,28 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XX7-bl-1An" id="dQ4-wz-HbI"/>
+                                    <outlet property="delegate" destination="XX7-bl-1An" id="1AA-CH-AQg"/>
+                                </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-Wz-zLg">
+                                <rect key="frame" x="16" y="629" width="89" height="30"/>
+                                <state key="normal" title="&lt; Around Me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToAroundMe:" destination="XX7-bl-1An" eventType="touchUpInside" id="LGS-rE-r0T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="p30-6Y-eRa" id="vUz-eh-UKu"/>
+                        <segue destination="faw-RG-BVq" kind="presentation" identifier="returnToAroundMeFromChat" id="KjK-Ko-zrp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-hr-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -659,8 +680,10 @@
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
         <image name="lo7l2E3.png" width="270" height="183"/>
+        <image name="chatBubble.png" width="740" height="134"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="j0E-fc-dLE"/>
+        <segue reference="KjK-Ko-zrp"/>
     </inferredMetricsTieBreakers>
 </document>
