@@ -93,6 +93,8 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         dismissViewControllerAnimated(true, completion: nil)
         
     }
+
+    
     
 }
 
