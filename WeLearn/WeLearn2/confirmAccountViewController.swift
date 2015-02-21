@@ -35,6 +35,7 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println("\(rootUser.name)")
         majorLabel.text = major
         universityLabel.text = university
     }

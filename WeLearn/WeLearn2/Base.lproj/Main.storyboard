@@ -537,7 +537,7 @@
                     <navigationItem key="navigationItem" title="Around You" id="a5K-Ls-geX">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="ec5-Qg-r9B">
                             <connections>
-                                <segue destination="9Ae-hv-x9l" kind="presentation" id="tzO-6w-EzL"/>
+                                <segue destination="9Ae-hv-x9l" kind="presentation" identifier="goToSettings" id="tzO-6w-EzL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

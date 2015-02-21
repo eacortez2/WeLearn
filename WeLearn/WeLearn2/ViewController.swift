@@ -8,6 +8,8 @@
 
 import UIKit
 
+var rootUser: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+
 class ViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var fbLoginView : FBLoginView!
@@ -75,6 +77,12 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         newUserTest.email = authData.providerData["email"] as String
                         newUserTest.name = user.first_name as String
                         newUserTest.photo = user.objectID
+                        
+                        rootUser.provider = authData.provider
+                        rootUser.email = authData.providerData["email"] as String
+                        rootUser.name = user.first_name as String
+                        rootUser.photo = user.objectID
+                        
                         let newUser = [
                             "provider": newUserTest.provider,
                             "email": newUserTest.email,
