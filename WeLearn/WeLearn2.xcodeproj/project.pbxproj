@@ -117,9 +117,7 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
-
 				89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */,
-				747892DC1A98821B00121CAC /* user.swift */,
 				89D726BC1A9852740024F1A0 /* AppDelegate.swift */,
 				89D726BE1A9852740024F1A0 /* ViewController.swift */,
 				2958BC251A988A3B0036FE47 /* QuestionIndexViewController.swift */,

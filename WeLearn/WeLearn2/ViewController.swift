@@ -40,6 +40,10 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                     println("Login failed. \(error)")
                 } else {
                     println("Logged in! \(authData)")
+                    var newUserTest: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+                    newUserTest.provider = authData.provider
+                    newUserTest.email = authData.providerData["email"] as String
+                    newUserTest.name = user.first_name as String
                     let newUser = [
                         "provider": newUserTest.provider,
                         "email": newUserTest.email,
@@ -51,8 +55,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         "bio": newUserTest.bio,
                         "badges": newUserTest.badges,
                         "provider": authData.provider,
-                        "email": authData.providerData["email"] as NSString,
-                        "first_name": user.first_name as NSString
+                        //"email": authData.providerData["email"] as NSString,
+                        //"first_name": user.first_name as NSString
                     ]
                     rootRef.childByAppendingPath("users")
                         .childByAppendingPath(authData.uid).setValue(newUser)
