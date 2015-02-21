@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, FBLoginViewDelegate {
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var fbLoginView : FBLoginView!
     @IBOutlet var fbProfilePic : FBProfilePictureView!
 
@@ -51,7 +52,10 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         "first_name": newUserTest.name,
                         "major": newUserTest.major,
                         "photoID": newUserTest.photo,
-                        
+                        "rep": newUserTest.rep,
+                        "location": newUserTest.location,
+                        "bio": newUserTest.bio,
+                        "badges": newUserTest.badges,
                     ]
                     
                     rootRef.childByAppendingPath("users")

@@ -22,6 +22,7 @@
 		89D726E51A9852DC0024F1A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E41A9852DC0024F1A0 /* Security.framework */; };
 		89D726E71A9852E50024F1A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */; };
 		89D726F21A9877B50024F1A0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726F11A9877B50024F1A0 /* FacebookSDK.framework */; };
+		89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		89D726E81A9853040024F1A0 /* WeLearn2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeLearn2-Bridging-Header.h"; sourceTree = "<group>"; };
 		89D726F11A9877B50024F1A0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8PoutVe-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
+				89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */,
 				747892DC1A98821B00121CAC /* user.swift */,
 				89D726BC1A9852740024F1A0 /* AppDelegate.swift */,
 				89D726BE1A9852740024F1A0 /* ViewController.swift */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D726C21A9852740024F1A0 /* Main.storyboard in Resources */,
+				89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */,
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
 				89D726C41A9852740024F1A0 /* Images.xcassets in Resources */,
 			);
