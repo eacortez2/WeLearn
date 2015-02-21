@@ -176,13 +176,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myImage" destination="0VP-QC-V7W" id="QMl-4d-kJd"/>
-                        <segue destination="MaL-si-19M" kind="presentation" identifier="returnToIndexFromNewQuestion" id="j0E-fc-dLE"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="TSe-6C-7Re"/>
+                        <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToIndexFromNewQuestion" id="XSQ-VJ-5kx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvf-Vy-E1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-919.5" y="1296.5"/>
+            <point key="canvasLocation" x="-713.5" y="1070.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XCm-k4-EkE">
@@ -256,7 +256,7 @@
             <objects>
                 <tableViewController id="4qP-gV-7mm" customClass="confirmAccountViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="4zf-kt-HMd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -359,7 +359,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwQ-Jx-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1156.5" y="-793.5"/>
+            <point key="canvasLocation" x="-1012.5" y="-793.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nWH-nE-VjX">
@@ -571,12 +571,12 @@
                         <outlet property="nameLabel" destination="OpG-Mq-Aw3" id="Ctv-ez-4A1"/>
                         <outlet property="profileImage" destination="nt8-zZ-nxV" id="7Ti-Ef-jUV"/>
                         <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
-                        <segue destination="faw-RG-BVq" kind="presentation" identifier="returnToAroundMe" id="pAG-A0-Ia7"/>
+                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="returnToAroundMe" id="rsK-Xt-HBO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10.5" y="-100.5"/>
+            <point key="canvasLocation" x="-1.5" y="-100.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
@@ -689,8 +689,7 @@
         <image name="lo7l2E3.png" width="270" height="183"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pAG-A0-Ia7"/>
-        <segue reference="TSe-6C-7Re"/>
-        <segue reference="j0E-fc-dLE"/>
+        <segue reference="rsK-Xt-HBO"/>
+        <segue reference="XSQ-VJ-5kx"/>
     </inferredMetricsTieBreakers>
 </document>

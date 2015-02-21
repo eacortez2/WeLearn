@@ -67,6 +67,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                     }
                     if(accountAlreadyCreated==false){
                         var newUserTest: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+                        
+                        // the next line is where the error in unwrapping occurs
                         newUserTest.provider = authData.provider
                         newUserTest.email = authData.providerData["email"] as String
                         newUserTest.name = user.first_name as String
