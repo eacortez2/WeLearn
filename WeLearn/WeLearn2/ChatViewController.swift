@@ -9,7 +9,6 @@
 import UIKit
 
 
-var currQuestionId:String = ""
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
