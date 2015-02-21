@@ -8,14 +8,18 @@
 
 import UIKit
 
+
+
 class AroundMeViewController: UITableViewController, UITableViewDataSource {
     
     @IBOutlet var tableViewData: UITableView!
     //temporary for testing before FireBase hookup
     let students: [FireBaseUser] = fakeData
-    var nearByPeople:[FireBaseUser] = []
+    //var nearByPeople:[FireBaseUser] = []
     var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
     var count: Int = 0
+    var nearByPeople:[FireBaseUser] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +73,7 @@ class AroundMeViewController: UITableViewController, UITableViewDataSource {
         
         cell.nameLabel.text = student.name
         cell.majorLabel.text = student.major
-        //cell.cellPicture.profileID = student.photo as NSString
+        cell.cellPicture.profileID = student.photo
         
         return cell
     }

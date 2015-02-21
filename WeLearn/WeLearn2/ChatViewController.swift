@@ -12,6 +12,8 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+        var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
+    var nearByPeople:[FireBaseUser] = []
     
     @IBOutlet var tableView: UITableView!
     
@@ -33,6 +35,20 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.tableView.rowHeight = 44
         
+        
+        
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            var newUser: FireBaseUser =  FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+            newUser.name = snapshot.value["first_name"] as NSString
+            newUser.email = snapshot.value["email"] as NSString
+            newUser.photo = snapshot.value["photoID"] as NSString
+            newUser.major = snapshot.value["major"] as NSString
+            newUser.bio = snapshot.value["bio"] as NSString
+            newUser.provider = snapshot.value["provider"] as NSString
+            newUser.rep = snapshot.value["rep"] as Int
+            self.nearByPeople.append(newUser)
+            
+        })
         
     }
     
