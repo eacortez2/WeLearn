@@ -382,7 +382,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="pjm-jz-BSu">
+
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StudentMatchCell" rowHeight="90" id="pjm-jz-BSu" customClass="StudentMatchCell" customModule="WeLearn2" customModuleProvider="target">
+
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pjm-jz-BSu" id="Y51-Ad-8Xc">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -420,6 +422,10 @@
                                         <constraint firstItem="cdy-4E-qck" firstAttribute="top" secondItem="Y51-Ad-8Xc" secondAttribute="topMargin" id="yps-sh-IFw"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="majorLabel" destination="cou-cC-z1z" id="aDg-gr-9C1"/>
+                                    <outlet property="nameLabel" destination="GKp-SZ-zob" id="FeW-p0-qXu"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
