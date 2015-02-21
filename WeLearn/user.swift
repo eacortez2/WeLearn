@@ -34,11 +34,16 @@ class FireBaseUser {
         self.radius = 5  //default is a 5 mile radius
         self.provider=""
         self.email = ""
+        super.init()
+    }
+    
         
-        
-        func incrementRep(){
+    func incrementRep(){
             rep++
-        }
+    }
+    
+    func decrementRep(){
+        rep--
     }
     
 }
