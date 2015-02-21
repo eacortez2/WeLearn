@@ -70,6 +70,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         newUserTest.provider = authData.provider
                         newUserTest.email = authData.providerData["email"] as String
                         newUserTest.name = user.first_name as String
+                        newUserTest.photo = user.objectID
                         let newUser = [
                             "provider": newUserTest.provider,
                             "email": newUserTest.email,
