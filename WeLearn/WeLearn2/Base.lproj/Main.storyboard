@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -625,7 +625,7 @@
                         <sections>
                             <tableViewSection id="S1J-AC-pVc">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="DLv-3U-HFT">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="289" id="DLv-3U-HFT">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DLv-3U-HFT" id="hww-6E-9YN">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -642,8 +642,8 @@
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r54-e5-seB" customClass="FBProfilePictureView">
-                                                    <rect key="frame" x="8" y="20" width="160" height="160"/>
+                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r54-e5-seB" customClass="FBProfilePictureView">
+                                                    <rect key="frame" x="8" y="20" width="160" height="160.5"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-Mq-Aw3">
@@ -695,6 +695,20 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HHb-pp-rdi" id="bYd-qT-CQG">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXG-SS-J88">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                                    <connections>
+                                                        <segue destination="A9x-pU-50l" kind="embed" id="RYP-u2-d4T"/>
+                                                    </connections>
+                                                </containerView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JXG-SS-J88" firstAttribute="leading" secondItem="bYd-qT-CQG" secondAttribute="leading" id="DTs-lR-YI8"/>
+                                                <constraint firstItem="JXG-SS-J88" firstAttribute="top" secondItem="bYd-qT-CQG" secondAttribute="top" id="UJE-MG-crX"/>
+                                                <constraint firstAttribute="trailing" secondItem="JXG-SS-J88" secondAttribute="trailing" id="iCT-qF-pam"/>
+                                                <constraint firstItem="JXG-SS-J88" firstAttribute="centerY" secondItem="bYd-qT-CQG" secondAttribute="centerY" id="rXQ-2o-ljS"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -841,6 +855,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-hx-lRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-415.5" y="-100.5"/>
+        </scene>
+        <!--Badge View Controller-->
+        <scene sceneID="2E8-hv-vYt">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="A9x-pU-50l" customClass="BadgeViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jyp-Cy-5B9"/>
+                        <viewControllerLayoutGuide type="bottom" id="XI2-RV-YJo"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LP6-D4-YuP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cQ3-l3-xUA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VV6-hd-UVT">
+                                    <size key="itemSize" width="80" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cQ3-l3-xUA" secondAttribute="trailing" id="Dtb-X6-jGo"/>
+                            <constraint firstItem="cQ3-l3-xUA" firstAttribute="leading" secondItem="LP6-D4-YuP" secondAttribute="leading" id="Ldh-cI-d4A"/>
+                            <constraint firstItem="cQ3-l3-xUA" firstAttribute="top" secondItem="Jyp-Cy-5B9" secondAttribute="bottom" id="RvD-lm-vfj"/>
+                            <constraint firstItem="cQ3-l3-xUA" firstAttribute="bottom" secondItem="XI2-RV-YJo" secondAttribute="top" id="gfv-br-T5I"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2S-AN-CW3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.5" y="464.5"/>
         </scene>
     </scenes>
     <resources>

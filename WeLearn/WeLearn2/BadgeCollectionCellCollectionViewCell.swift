@@ -9,20 +9,22 @@
 import UIKit
 
 class BadgeCollectionCellCollectionViewCell: UICollectionViewCell {
-    
-    var badgeName: String!
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        var arrayofBadges = NSBundle.mainBundle().loadNibNamed("BadgeCell", owner: self, options: nil)
-    }
 
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    var badgeImageName: String!
     
-    func updateCell(){
-        
-        
-    }
+    @IBOutlet weak var badgeView: UIImageView!
+    
+//    func updateCell(){
+//        
+//        var sourcePath  = "Images"
+//      //  NSString *filename = [NSString stringWithFormat:@"%@/%@", sourcePath, self.badgeImageName];
+//        let slash: String = "/"
+//        var filename : String = sourcePath+slash+badgeImageName
+//        
+//
+//        var badgeImage: UIImage = UIImage(named: filename)!
+//        var badgeDisplay: UIImageView = UIImageView(image: badgeImage)
+//        
+//    }
+    
 }

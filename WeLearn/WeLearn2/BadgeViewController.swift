@@ -13,6 +13,7 @@ class BadgeViewController: UIViewController, UICollectionViewDelegate, UICollect
     @IBOutlet weak var collectionView : UICollectionView!
     var badgeArray: [String]! = []
     
+    let badgesArray = ["image/noob_orange", "images/coffee_badge.png", "images/experiments_badge.png"]
     
     
     func loadImages(){
@@ -29,14 +30,42 @@ class BadgeViewController: UIViewController, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BadgeCell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BadgeCell", forIndexPath: indexPath) as BadgeCollectionCellCollectionViewCell
+        
+        var imageName :String = badgeArray[indexPath.row]
+        cell.badgeImageName = imageName
+        
+        var badgeImage: UIImage = UIImage(named: cell.badgeImageName)!
+        var badgeDisplay: UIImageView = UIImageView(image: badgeImage)
+        
+        cell.badgeView = badgeDisplay
+        
+        
+      //  cell.updateCell()
         
         return cell
     }
     
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCellWithIdentifier("UniversityCell", forIndexPath: indexPath) as UITableViewCell
+//        
+//        cell.textLabel?.text = universities[indexPath.row]
+//        
+//        if indexPath.row == selectedUniversityIndex {
+//            cell.accessoryType = .Checkmark
+//        } else {
+//            cell.accessoryType = .None
+//        }
+//        
+//        return cell
+//    }
     
     
     
+//    func setupCollectionView(){
+//
+//        self.collectionView.registerClass(BadgeCollectionCellCollectionViewCell.classForCoder() , forCellWithReuseIdentifier: "BadgeCell")
+//    }
     
     
     
@@ -44,6 +73,8 @@ class BadgeViewController: UIViewController, UICollectionViewDelegate, UICollect
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadImages()
+        
+ //       self.setupCollectionView()
         // Do any additional setup after loading the view.
     }
 
