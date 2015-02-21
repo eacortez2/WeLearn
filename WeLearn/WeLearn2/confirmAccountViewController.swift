@@ -14,9 +14,10 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     var major:String = "Computer Science"
     var university:String = "Santa Barbara City College"
     
+    @IBOutlet weak var ActualNameField: UILabel!
     @IBOutlet weak var name: UITableViewCell!
     @IBOutlet weak var bio: UITextView!
-    @IBOutlet weak var profilePic: UIView!
+    @IBOutlet weak var profilePic: FBProfilePictureView!
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var universityLabel: UILabel!
     
@@ -27,7 +28,7 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     
     
     @IBAction func doneAddingProfile(segue: UIStoryboardSegue) {
-        
+        rootUser.bio = bio.text
         self.performSegueWithIdentifier("toAroundMeFromConfirmProfile", sender: self)
         
     }
@@ -35,9 +36,12 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bio.text = rootUser.bio
         println("\(rootUser.name)")
         majorLabel.text = major
         universityLabel.text = university
+        profilePic.profileID = rootUser.photo
+        ActualNameField.text = rootUser.name
     }
     
     override func didReceiveMemoryWarning() {
@@ -62,8 +66,13 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
 //                Player(name: nameTextField.text, game:game, rating: 1)
 //        }
 //    }
+    func textFieldDidBeginEditing(textField: UITextField) {
+       textField.placeholder = nil
+    }
     
-    
+    func textFieldDidEndEditing(textField: UITextField) {
+        textField.placeholder = rootUser.bio
+    }
     
     
     @IBAction func selectedMajor(segue:UIStoryboardSegue) {

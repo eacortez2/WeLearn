@@ -50,6 +50,10 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                 } else {
                     //println("Logged in! \(authData)")
                     userID = authData.uid
+                    rootUser.provider = authData.provider
+                    rootUser.email = authData.providerData["email"] as String
+                    rootUser.name = user.first_name as String
+                    rootUser.photo = user.objectID
                     var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
                     ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
                         keyCount++
@@ -78,10 +82,10 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         newUserTest.name = user.first_name as String
                         newUserTest.photo = user.objectID
                         
-                        rootUser.provider = authData.provider
-                        rootUser.email = authData.providerData["email"] as String
-                        rootUser.name = user.first_name as String
-                        rootUser.photo = user.objectID
+//                        rootUser.provider = authData.provider
+//                        rootUser.email = authData.providerData["email"] as String
+//                        rootUser.name = user.first_name as String
+//                        rootUser.photo = user.objectID
                         
                         let newUser = [
                             "provider": newUserTest.provider,
