@@ -359,8 +359,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bio" destination="yXe-N3-rbj" id="ub0-Hh-Q6I"/>
+                        <outlet property="majorLabel" destination="324-Co-6xs" id="BaT-m8-l4T"/>
                         <outlet property="name" destination="77q-f1-VSY" id="A1u-ne-8gA"/>
                         <outlet property="profilePic" destination="vgG-Yg-Qsf" id="Coi-8A-Mcx"/>
+                        <outlet property="universityLabel" destination="vO6-SQ-LjQ" id="bB2-qK-3Y0"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwQ-Jx-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -389,6 +391,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hXn-o9-0rl" kind="unwind" unwindAction="selectedMajor:" id="4C2-mY-Vnk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -399,23 +404,35 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alO-3P-493" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hXn-o9-0rl" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-773.5" y="-1563.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--University Picker View Controller-->
         <scene sceneID="nhF-aP-M9N">
             <objects>
-                <tableViewController id="vzF-A1-NYe" sceneMemberID="viewController">
+                <tableViewController id="vzF-A1-NYe" customClass="UniversityPickerViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="d14-Np-ZF0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YLD-Au-FUG">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Lbo-1Y-gSh" style="IBUITableViewCellStyleDefault" id="YLD-Au-FUG">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YLD-Au-FUG" id="qVP-1k-Ahs">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="University" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lbo-1Y-gSh">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="2v2-IU-z4Z" kind="unwind" unwindAction="selectedUniversity:" id="bMC-Va-FBI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -425,6 +442,7 @@
                     </tableView>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJS-ML-klS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2v2-IU-z4Z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-369.5" y="-1073.5"/>
         </scene>
