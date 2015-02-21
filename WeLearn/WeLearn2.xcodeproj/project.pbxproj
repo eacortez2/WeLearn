@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2958BC221A9880B30036FE47 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2958BC211A9880B30036FE47 /* user.swift */; };
 		2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2958BC231A9885CA0036FE47 /* QuestionIndexCell.swift */; };
+		2958BC261A988A3B0036FE47 /* QuestionIndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2958BC251A988A3B0036FE47 /* QuestionIndexViewController.swift */; };
 		747892D91A987AAE00121CAC /* confirmAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892D81A987AAE00121CAC /* confirmAccountViewController.swift */; };
 		89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BC1A9852740024F1A0 /* AppDelegate.swift */; };
 		89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BE1A9852740024F1A0 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 		89D726E51A9852DC0024F1A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E41A9852DC0024F1A0 /* Security.framework */; };
 		89D726E71A9852E50024F1A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */; };
 		89D726F21A9877B50024F1A0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726F11A9877B50024F1A0 /* FacebookSDK.framework */; };
+		89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,7 @@
 /* Begin PBXFileReference section */
 		2958BC211A9880B30036FE47 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		2958BC231A9885CA0036FE47 /* QuestionIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIndexCell.swift; sourceTree = "<group>"; };
+		2958BC251A988A3B0036FE47 /* QuestionIndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIndexViewController.swift; sourceTree = "<group>"; };
 		747892D81A987AAE00121CAC /* confirmAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmAccountViewController.swift; sourceTree = "<group>"; };
 		89D726B71A9852740024F1A0 /* WeLearn2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLearn2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D726BB1A9852740024F1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		89D726E81A9853040024F1A0 /* WeLearn2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeLearn2-Bridging-Header.h"; sourceTree = "<group>"; };
 		89D726F11A9877B50024F1A0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8PoutVe-1.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +117,12 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
-				2958BC211A9880B30036FE47 /* user.swift */,
+
+				89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */,
+				747892DC1A98821B00121CAC /* user.swift */,
 				89D726BC1A9852740024F1A0 /* AppDelegate.swift */,
 				89D726BE1A9852740024F1A0 /* ViewController.swift */,
+				2958BC251A988A3B0036FE47 /* QuestionIndexViewController.swift */,
 				747892D81A987AAE00121CAC /* confirmAccountViewController.swift */,
 				89D726C01A9852740024F1A0 /* Main.storyboard */,
 				89D726C31A9852740024F1A0 /* Images.xcassets */,
@@ -232,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89D726C21A9852740024F1A0 /* Main.storyboard in Resources */,
+				89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */,
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
 				89D726C41A9852740024F1A0 /* Images.xcassets in Resources */,
 			);
@@ -256,6 +264,7 @@
 				2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */,
 				89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */,
 				89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */,
+				2958BC261A988A3B0036FE47 /* QuestionIndexViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

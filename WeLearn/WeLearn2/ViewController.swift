@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, FBLoginViewDelegate {
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet var fbLoginView : FBLoginView!
     @IBOutlet var fbProfilePic : FBProfilePictureView!
 
@@ -40,6 +41,15 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                 } else {
                     println("Logged in! \(authData)")
                     let newUser = [
+                        "provider": newUserTest.provider,
+                        "email": newUserTest.email,
+                        "first_name": newUserTest.name,
+                        "major": newUserTest.major,
+                        "photoID": newUserTest.photo,
+                        "rep": newUserTest.rep,
+                        "location": newUserTest.location,
+                        "bio": newUserTest.bio,
+                        "badges": newUserTest.badges,
                         "provider": authData.provider,
                         "email": authData.providerData["email"] as NSString,
                         "first_name": user.first_name as NSString
