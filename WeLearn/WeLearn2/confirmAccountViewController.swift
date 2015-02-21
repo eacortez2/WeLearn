@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class confirmAccountViewController: UITableViewController {
+class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     
     var major:String = "Computer Science"
     var university:String = "Santa Barbara City College"
@@ -39,6 +39,12 @@ class confirmAccountViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
+    }
+    
+    
 //    if segue.identifier == "PickMajor" {
 //    let majorPickerViewController = segue.destinationViewController as MajorPickerViewController
 //    majorPickerViewController.selectedMajor = major
@@ -50,6 +56,8 @@ class confirmAccountViewController: UITableViewController {
 //                Player(name: nameTextField.text, game:game, rating: 1)
 //        }
 //    }
+    
+    
     
     
     @IBAction func selectedMajor(segue:UIStoryboardSegue) {
