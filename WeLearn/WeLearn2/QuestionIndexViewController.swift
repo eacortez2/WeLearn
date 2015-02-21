@@ -35,7 +35,8 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         
-        var defaultRef = stringRef + artRefAdd
+        var defaultRef = stringRef + scienceRefAdd
+        currCategoryIcon.image = scienceImage
         
         // Create a reference to a Firebase location
         var myRootRef = Firebase(url:defaultRef)

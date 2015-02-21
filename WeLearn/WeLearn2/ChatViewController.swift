@@ -26,7 +26,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "SplashBackground.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "NewSplashBackground.png")!)
         
         self.tableView.rowHeight = 107
         

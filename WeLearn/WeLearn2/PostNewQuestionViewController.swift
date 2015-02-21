@@ -96,9 +96,9 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
     var humImageUnselected = UIImage(named: "humIcon2.png")
     var sciImageUnselected = UIImage(named: "sciIcon2.png")
     
-    var artImageSelected = UIImage(named: "artIcon2Selected.png")
-    var humImageSelected = UIImage(named: "humIcon2Selected.png")
-    var sciImageSelected = UIImage(named: "sciIcon2Selected.png")
+    var artImageSelected = UIImage(named: "path3941.png")
+    var humImageSelected = UIImage(named: "path427.png")
+    var sciImageSelected = UIImage(named: "path149.png")
     
     
     @IBAction func chooseArtIcon(sender: AnyObject) {
@@ -109,7 +109,7 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         println("art chosen")
         
-        artButton.setImage(artImageUnselected, forState: .Normal)
+        artButton.setImage(artImageSelected, forState: .Normal)
         humButton.setImage(humImageUnselected, forState: .Normal)
         sciButton.setImage(sciImageUnselected, forState: .Normal)
         
@@ -206,11 +206,15 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         var imageUrl = ""
         
         if (imageExists) {
+            
+            println("image exists")
         
-            var imageUrl = parseTagLine(tagLine)
+            imageUrl = parseTagLine(tagLine)
+            println("image url is: " + imageUrl)
             
             imageAssetAryDict[activeDiscussionType]?.append(myImage.image!)
             
+            println(imageAssetAryDict)
         }
         
         var discussionText = questionText.text
@@ -219,6 +223,8 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         var discussionRef = myRootRef.childByAutoId()
         
         discussionRef.setValue(["tagLine":tagLine, "userName":userName,"userId":userId,"imageUrl":imageUrl,"discussionText":discussionText])
+        
+    self.performSegueWithIdentifier("returnToIndexFromNewQuestion", sender: self)
         
     }
     

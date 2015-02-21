@@ -74,9 +74,10 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-8H-DVW">
-                                <rect key="frame" x="121" y="617" width="132" height="30"/>
+                                <rect key="frame" x="99" y="617" width="177" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Post New Question">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.93333333330000001" green="0.51372549020000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="postNewQuestionFromIndex:" destination="MaL-si-19M" eventType="touchUpInside" id="s2N-f3-kx4"/>
@@ -176,8 +177,10 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-OW-jTV">
-                                <rect key="frame" x="18" y="330" width="132" height="30"/>
+                                <rect key="frame" x="18" y="325" width="156" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Photo From Library">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.51372549020000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -185,8 +188,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAk-jP-sk2">
-                                <rect key="frame" x="243" y="330" width="112" height="30"/>
+                                <rect key="frame" x="215" y="325" width="140" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Take New Photo">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.51372549020000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -194,20 +199,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-QC-V7W">
-                                <rect key="frame" x="18" y="368" width="339" height="239"/>
+                                <rect key="frame" x="18" y="352" width="339" height="239"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oz-gk-uyj">
-                                <rect key="frame" x="124" y="605" width="126" height="30"/>
-                                <state key="normal" title="Post my Question!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="postQuestion:" destination="G9H-m0-sos" eventType="touchUpInside" id="Qht-ra-IxK"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeI-tb-O1I">
-                                <rect key="frame" x="133" y="629" width="109" height="30"/>
+                                <rect key="frame" x="119" y="629" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Cancel My Post">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.51372549020000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -239,6 +237,17 @@
                                 </state>
                                 <connections>
                                     <action selector="chooseArtIcon:" destination="G9H-m0-sos" eventType="touchUpInside" id="Bzb-0F-zYG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oz-gk-uyj">
+                                <rect key="frame" x="102" y="599" width="171" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Post my Question!">
+                                    <color key="titleColor" red="0.93333333330000001" green="0.51372549020000002" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postQuestion:" destination="G9H-m0-sos" eventType="touchUpInside" id="Qht-ra-IxK"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -293,7 +302,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-91-5HK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NewSplashBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-91-5HK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIj-si-6FZ" customClass="FBLoginView">
@@ -884,7 +893,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SplashBackground.png" width="472" height="696"/>
+        <image name="NewSplashBackground.png" width="473" height="697"/>
         <image name="artIcon2.png" width="212" height="206"/>
         <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
@@ -895,6 +904,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oU0-pS-dez"/>
-        <segue reference="TSe-6C-7Re"/>
+        <segue reference="xJI-Ls-86h"/>
     </inferredMetricsTieBreakers>
 </document>
