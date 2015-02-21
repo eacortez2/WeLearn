@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -72,10 +72,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="MaL-si-19M" id="FWI-Mn-FKp"/>
-                                    <outlet property="delegate" destination="MaL-si-19M" id="MzR-cR-934"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-8H-DVW">
                                 <rect key="frame" x="121" y="539" width="132" height="30"/>
@@ -241,6 +237,7 @@
                         <outlet property="backgroundImage" destination="5PD-91-5HK" id="0cU-H9-J8v"/>
                         <outlet property="fbLoginView" destination="vIj-si-6FZ" id="X11-wM-Kqr"/>
                         <outlet property="fbProfilePic" destination="Eiv-ba-CK0" id="kOs-pw-aAa"/>
+                        <segue destination="e5y-g4-BEc" kind="show" identifier="loginSegue" id="xJI-Ls-86h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -403,7 +400,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-4E-qck">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-4E-qck">
                                             <rect key="frame" x="8" y="8" width="75" height="75"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -440,10 +437,10 @@
             </objects>
             <point key="canvasLocation" x="-1156.5" y="391.5"/>
         </scene>
-        <!--Chat View Controller-->
+        <!--View Controller-->
         <scene sceneID="KKG-R7-3Ou">
             <objects>
-                <viewController id="XX7-bl-1An" customClass="ChatViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XX7-bl-1An" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="akz-LW-AtG"/>
                         <viewControllerLayoutGuide type="bottom" id="gn5-b0-QWT"/>
@@ -456,33 +453,21 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="n72-yq-F53">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="107" id="n72-yq-F53">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n72-yq-F53" id="rpp-dV-Puh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-72-xdh">
-                                                    <rect key="frame" x="8" y="10" width="88" height="91"/>
+                                                    <rect key="frame" x="8" y="10" width="88" height="88"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epF-vv-u0o">
-                                                    <rect key="frame" x="104" y="11" width="263" height="90"/>
+                                                    <rect key="frame" x="104" y="10" width="263" height="88"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRu-MO-bcH">
-                                                    <rect key="frame" x="119" y="23" width="232" height="67"/>
+                                                    <rect key="frame" x="119" y="21" width="233" height="64"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time &amp; Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-17-Sjq">
-                                                    <rect key="frame" x="288" y="108" width="79" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UserFirstName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fag-bJ-qQI">
-                                                    <rect key="frame" x="8" y="109" width="97" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -490,10 +475,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="XX7-bl-1An" id="3SQ-yh-MPt"/>
-                                    <outlet property="delegate" destination="XX7-bl-1An" id="bKb-Yi-XUW"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -502,18 +483,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-hr-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-695.5" y="378.5"/>
+            <point key="canvasLocation" x="-695.5" y="387.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="dsi-61-E9v">
             <objects>
-                <navigationController id="4dY-Ys-Kh0" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="4dY-Ys-Kh0" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="4RQ-d0-siY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="llM-14-RiR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Ndb-tg-Q3P">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="faw-RG-BVq" kind="relationship" relationship="rootViewController" id="EGo-We-Xqn"/>
                     </connections>
@@ -527,6 +511,6 @@
         <image name="8PoutVe-1.png" width="471" height="695"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j0E-fc-dLE"/>
+        <segue reference="3vF-At-zYG"/>
     </inferredMetricsTieBreakers>
 </document>
