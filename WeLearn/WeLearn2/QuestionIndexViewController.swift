@@ -14,6 +14,8 @@ var currQuestionId:String = ""
 
 var imageAssetAryDict:[String:[UIImage]] = ["art":[], "humanities":[], "science":[]]
 
+var discussionAry:[Discussion] = []
+
 class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
@@ -34,14 +36,51 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
-        
-        var defaultRef = stringRef + scienceRefAdd
+        var currentRef = scienceRefAdd
+        var defaultRef = stringRef + currentRef
         currCategoryIcon.image = scienceImage
         
         // Create a reference to a Firebase location
         var myRootRef = Firebase(url:defaultRef)
-        // Write data to Firebase
-        myRootRef.childByAppendingPath("question1").setValue("test value")
+        
+            myRootRef.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+                
+                println("now observing snapshot")
+                let tagLine = snapshot.value["tagLine"] as? String
+                
+                let userName = snapshot.value["userName"] as? String
+                let timeStamp = snapshot.value["timeStamp"] as? String
+                let answeredStatus = "Unanswered"
+                let numReplies = 0
+                
+//                var text:String
+//                text = snapshot.value["discussionText"]? as String
+                let userId = snapshot.value["userId"] as String
+                
+                let discussion = Discussion(text: "placeHolder text", tagLine: tagLine, sender: userName, imageStr: "", timeStamp: timeStamp!, subject: currentRef, posterID: userId)
+                
+                discussionAry.append(discussion)
+                
+                println(discussionAry)
+                
+//                self.messagesRefAry.append(snapshot.key)
+//                println(self.messagesRefAry)
+//                
+//                //            println(timestampRead)
+//                //            println(netVotes)
+//                
+//                let comment = Comment(text: text, sender: sender, netVotes: netVotes, timeStamp:timeStamp!)
+//                self.messagesAry.append(comment)
+//                println(comment)
+                
+                
+                
+                //Note that the strong self causes a memory leak!
+
+                self.tableView.reloadData()
+            })
+        
+        
         
         
         
@@ -58,9 +97,10 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         
         var myRootRef = Firebase(url:stringRef + artRefAdd)
         // Write data to Firebase
-        myRootRef.childByAppendingPath("question1").setValue("test value")
         
         currCategoryIcon.image = artImage
+        
+        tableView.reloadData()
         
     }
     
@@ -69,9 +109,10 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         
         var myRootRef = Firebase(url:stringRef + humanitiesRefAdd)
         // Write data to Firebase
-        myRootRef.childByAppendingPath("question1").setValue("test value")
         
         currCategoryIcon.image = humanitiesImage
+        
+        tableView.reloadData()
         
     }
 
@@ -80,9 +121,10 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         
         var myRootRef = Firebase(url:stringRef + scienceRefAdd)
         // Write data to Firebase
-        myRootRef.childByAppendingPath("question1").setValue("test value")
     
         currCategoryIcon.image = scienceImage
+        
+        tableView.reloadData()
         
     }
     
@@ -109,20 +151,22 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as QuestionIndexCell
         
-//        var imageName = UIImage(named: imageAssetAry[indexPath.row])
-//        cell.subjectIcon.image = imageName
+                println("yes cells are loading")
+        println(discussionAry)
         
-//        cell.subjectLabel.text = questionSubjectAry[indexPath.row]
+//        cell.subjectLabel.text = discussionAry[indexPath.row].discussionText()
         
-//        cell.taglineLabel.text = taglineAry[indexPath.row]
+        cell.taglineLabel.text = discussionAry[indexPath.row].tagLine()
         
-//        cell.posterIdLabel.text = posterIdAry[indexPath.row]
+        cell.posterNameLabel.text = discussionAry[indexPath.row].userName()
         
-//        cell.timeDateLabel.text = "test date"
-//        
-//        cell.answeredStatusLabel.text = "not answered"
-//        
-//        cell.numRepliesLabel.text = "0 replies"
+        cell.timeDateLabel.text = discussionAry[indexPath.row].timeStamp()
+        
+        cell.answeredStatusLabel.text = "Unanswered"
+        
+        cell.numRepliesLabel.text = "0 replies"
+        
+
         
         return cell
     }

@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="154" width="375" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="115" id="IOJ-CX-cOt" customClass="QuestionIndexCell" customModule="WeLearn2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celltest" rowHeight="115" id="IOJ-CX-cOt" customClass="QuestionIndexCell" customModule="WeLearn2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IOJ-CX-cOt" id="Kbe-ER-2dL">
@@ -72,6 +72,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MaL-si-19M" id="s9b-UZ-J07"/>
+                                    <outlet property="delegate" destination="MaL-si-19M" id="G75-yU-945"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-8H-DVW">
                                 <rect key="frame" x="99" y="617" width="177" height="30"/>

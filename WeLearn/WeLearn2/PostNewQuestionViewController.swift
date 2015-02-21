@@ -205,6 +205,13 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         var imageUrl = ""
         
+        
+        var date = NSDate()
+        var tempTimeStr = "\(date)"
+        var tempTimeAry = tempTimeStr.componentsSeparatedByString(" ")
+        var returnTime = tempTimeAry[1]
+        var timeStamp = returnTime
+        
         if (imageExists) {
             
             println("image exists")
@@ -222,7 +229,7 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         var discussionRef = myRootRef.childByAutoId()
         
-        discussionRef.setValue(["tagLine":tagLine, "userName":userName,"userId":userId,"imageUrl":imageUrl,"discussionText":discussionText])
+        discussionRef.setValue(["tagLine":tagLine, "userName":userName,"userId":userId,"imageUrl":imageUrl,"discussionText":discussionText,"timeStamp":timeStamp])
         
     self.performSegueWithIdentifier("returnToIndexFromNewQuestion", sender: self)
         

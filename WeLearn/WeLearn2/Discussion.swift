@@ -102,4 +102,9 @@ class Discussion : NSObject {
     func imageUrl() -> String? {
         return imageUrl_;
     }
+    
+    func tagLine() -> String? {
+        return tagLine_;
+        
+    }
 }
