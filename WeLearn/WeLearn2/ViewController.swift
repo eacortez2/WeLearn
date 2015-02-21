@@ -69,7 +69,9 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         var newUserTest: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
                         
                         // the next line is where the error in unwrapping occurs
+                        if (authData != nil) {
                         newUserTest.provider = authData.provider
+                        
                         newUserTest.email = authData.providerData["email"] as String
                         newUserTest.name = user.first_name as String
                         newUserTest.photo = user.objectID
@@ -89,6 +91,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         ]
                         rootRef.childByAppendingPath("users")
                             .childByAppendingPath(authData.uid).setValue(newUser)
+                    }
+                        
                     }
                     
                 })
