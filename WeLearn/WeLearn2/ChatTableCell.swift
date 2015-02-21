@@ -11,5 +11,8 @@ import UIKit
 class ChatTableCell:UITableViewCell {
     
     
+    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var chatTextLabel: UILabel!
+    @IBOutlet var chatBubbleImage: UIImageView!
     
 }
