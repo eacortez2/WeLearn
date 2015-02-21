@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -177,11 +177,12 @@
                     <connections>
                         <outlet property="myImage" destination="0VP-QC-V7W" id="QMl-4d-kJd"/>
                         <segue destination="MaL-si-19M" kind="presentation" identifier="returnToIndexFromNewQuestion" id="j0E-fc-dLE"/>
+                        <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="TSe-6C-7Re"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvf-Vy-E1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-969.5" y="1296.5"/>
+            <point key="canvasLocation" x="-888.5" y="1268.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XCm-k4-EkE">
@@ -253,7 +254,6 @@
         <!--Confirm Profile-->
         <scene sceneID="VeO-uu-qIB">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rwQ-Jx-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="4qP-gV-7mm" customClass="confirmAccountViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="4zf-kt-HMd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -357,6 +357,7 @@
                         <outlet property="profilePic" destination="vgG-Yg-Qsf" id="Coi-8A-Mcx"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwQ-Jx-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1156.5" y="-793.5"/>
         </scene>
@@ -443,7 +444,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="iWq-2T-p1z" kind="presentation" identifier="toBioFromAroundMe" id="qB3-pa-PK5"/>
+                        <segue destination="hiY-sh-UpA" kind="presentation" identifier="toBioFromAroundMe" id="9PU-ei-b28"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSw-VS-D6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -561,17 +562,17 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
                         <outlet property="bioLabel" destination="DWn-Nq-2wK" id="s2y-Qo-liG"/>
                         <outlet property="majorLabel" destination="Mca-KC-Vxr" id="5vG-YA-Kuf"/>
                         <outlet property="nameLabel" destination="OpG-Mq-Aw3" id="Ctv-ez-4A1"/>
                         <outlet property="profileImage" destination="nt8-zZ-nxV" id="7Ti-Ef-jUV"/>
+                        <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="B9Z-kd-jGs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="218.5" y="-98.5"/>
+            <point key="canvasLocation" x="117.5" y="-162.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
@@ -631,12 +632,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="p30-6Y-eRa" id="vUz-eh-UKu"/>
-                        <segue destination="faw-RG-BVq" kind="presentation" identifier="returnToAroundMeFromChat" id="KjK-Ko-zrp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-hr-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-281.5" y="684.5"/>
+            <point key="canvasLocation" x="-524.5" y="657.5"/>
         </scene>
         <!--Around Me-->
         <scene sceneID="dsi-61-E9v">
@@ -676,7 +676,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-hx-lRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-294" y="-98"/>
+            <point key="canvasLocation" x="-415.5" y="-100.5"/>
         </scene>
     </scenes>
     <resources>
@@ -685,7 +685,7 @@
         <image name="lo7l2E3.png" width="270" height="183"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="TSe-6C-7Re"/>
         <segue reference="j0E-fc-dLE"/>
-        <segue reference="EGo-We-Xqn"/>
     </inferredMetricsTieBreakers>
 </document>
