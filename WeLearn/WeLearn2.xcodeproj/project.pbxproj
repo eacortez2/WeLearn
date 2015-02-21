@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74390A011A98788B00C36C1D /* confrimProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74390A001A98788B00C36C1D /* confrimProfileViewController.swift */; };
+		74390A031A98794F00C36C1D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74390A021A98794F00C36C1D /* FacebookSDK.framework */; };
 		89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BC1A9852740024F1A0 /* AppDelegate.swift */; };
 		89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BE1A9852740024F1A0 /* ViewController.swift */; };
 		89D726C21A9852740024F1A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C01A9852740024F1A0 /* Main.storyboard */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74390A001A98788B00C36C1D /* confrimProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confrimProfileViewController.swift; sourceTree = "<group>"; };
+		74390A021A98794F00C36C1D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../../../Volumes/KINGSTON/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		89D726B71A9852740024F1A0 /* WeLearn2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLearn2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D726BB1A9852740024F1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D726BC1A9852740024F1A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,7 @@
 				89D726E11A9852CC0024F1A0 /* libc++.dylib in Frameworks */,
 				89D726DF1A9852C50024F1A0 /* libicucore.dylib in Frameworks */,
 				89D726DD1A9852A60024F1A0 /* Firebase.framework in Frameworks */,
+				74390A031A98794F00C36C1D /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,7 @@
 		89D726AE1A9852740024F1A0 = {
 			isa = PBXGroup;
 			children = (
+				74390A021A98794F00C36C1D /* FacebookSDK.framework */,
 				89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */,
 				89D726E41A9852DC0024F1A0 /* Security.framework */,
 				89D726E21A9852D20024F1A0 /* CFNetwork.framework */,
@@ -109,6 +115,7 @@
 				89D726C31A9852740024F1A0 /* Images.xcassets */,
 				89D726C51A9852740024F1A0 /* LaunchScreen.xib */,
 				89D726BA1A9852740024F1A0 /* Supporting Files */,
+				74390A001A98788B00C36C1D /* confrimProfileViewController.swift */,
 			);
 			path = WeLearn2;
 			sourceTree = "<group>";
@@ -240,6 +247,7 @@
 			files = (
 				89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */,
 				89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */,
+				74390A011A98788B00C36C1D /* confrimProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,6 +374,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Volumes/KINGSTON/FacebookSDK,
 				);
 				INFOPLIST_FILE = WeLearn2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -384,6 +393,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Volumes/KINGSTON/FacebookSDK,
 				);
 				INFOPLIST_FILE = WeLearn2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -446,6 +456,7 @@
 				89D726D81A9852740024F1A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D726D91A9852740024F1A0 /* Build configuration list for PBXNativeTarget "WeLearn2Tests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +465,7 @@
 				89D726DB1A9852740024F1A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
