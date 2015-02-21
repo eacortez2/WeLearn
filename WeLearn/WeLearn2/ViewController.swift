@@ -41,7 +41,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                     println("Logged in! \(authData)")
                     let newUser = [
                         "provider": authData.provider,
-                        "email": authData.providerData["email"] as NSString
+                        "email": authData.providerData["email"] as NSString,
+                        "first_name": user.first_name as NSString
                     ]
                     rootRef.childByAppendingPath("users")
                         .childByAppendingPath(authData.uid).setValue(newUser)
