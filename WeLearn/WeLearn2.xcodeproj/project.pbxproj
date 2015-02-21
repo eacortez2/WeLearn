@@ -37,6 +37,7 @@
 		89D726F21A9877B50024F1A0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726F11A9877B50024F1A0 /* FacebookSDK.framework */; };
 		89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */; };
 		89D726FE1A98B90F0024F1A0 /* lo7l2E3.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */; };
+		89D727001A98EB610024F1A0 /* pics.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726FF1A98EB610024F1A0 /* pics.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		89D726F11A9877B50024F1A0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8PoutVe-1.png"; sourceTree = "<group>"; };
 		89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lo7l2E3.png; sourceTree = "<group>"; };
+		89D726FF1A98EB610024F1A0 /* pics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pics.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
+				89D726FF1A98EB610024F1A0 /* pics.png */,
 				89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */,
 				89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */,
 				2958BC2B1A98B47A0036FE47 /* chatBubble.png */,
@@ -275,6 +278,7 @@
 				2958BC2C1A98B47A0036FE47 /* chatBubble.png in Resources */,
 				89D726C21A9852740024F1A0 /* Main.storyboard in Resources */,
 				89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */,
+				89D727001A98EB610024F1A0 /* pics.png in Resources */,
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
 				89D726FE1A98B90F0024F1A0 /* lo7l2E3.png in Resources */,
 				89D726C41A9852740024F1A0 /* Images.xcassets in Resources */,
