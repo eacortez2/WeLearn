@@ -35,6 +35,8 @@
 		74A95CA61A98BC6800694619 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A95CA51A98BC6800694619 /* ProfileViewController.swift */; };
 		74C6691E1A98D266008D5BA8 /* MajorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6691D1A98D266008D5BA8 /* MajorPickerViewController.swift */; };
 		74C669201A98D9E4008D5BA8 /* UniversityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6691F1A98D9E4008D5BA8 /* UniversityPickerViewController.swift */; };
+		894055CF1A993CE100CE5744 /* Discussions.png in Resources */ = {isa = PBXBuildFile; fileRef = 894055CD1A993CE100CE5744 /* Discussions.png */; };
+		894055D01A993CE100CE5744 /* PeopleAround.png in Resources */ = {isa = PBXBuildFile; fileRef = 894055CE1A993CE100CE5744 /* PeopleAround.png */; };
 		89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BC1A9852740024F1A0 /* AppDelegate.swift */; };
 		89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BE1A9852740024F1A0 /* ViewController.swift */; };
 		89D726C21A9852740024F1A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C01A9852740024F1A0 /* Main.storyboard */; };
@@ -93,6 +95,8 @@
 		74A95CA51A98BC6800694619 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		74C6691D1A98D266008D5BA8 /* MajorPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorPickerViewController.swift; sourceTree = "<group>"; };
 		74C6691F1A98D9E4008D5BA8 /* UniversityPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityPickerViewController.swift; sourceTree = "<group>"; };
+		894055CD1A993CE100CE5744 /* Discussions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Discussions.png; sourceTree = "<group>"; };
+		894055CE1A993CE100CE5744 /* PeopleAround.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PeopleAround.png; sourceTree = "<group>"; };
 		89D726B71A9852740024F1A0 /* WeLearn2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLearn2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D726BB1A9852740024F1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D726BC1A9852740024F1A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
+				894055CD1A993CE100CE5744 /* Discussions.png */,
+				894055CE1A993CE100CE5744 /* PeopleAround.png */,
 				89D727031A98FB770024F1A0 /* bigcirclebetter.png */,
 				89D727011A98FA0C0024F1A0 /* bigcircle.png */,
 				89D726FF1A98EB610024F1A0 /* pics.png */,
@@ -323,6 +329,7 @@
 				2958BC2C1A98B47A0036FE47 /* chatBubble.png in Resources */,
 				2966F8D21A98ECFA003C96C5 /* artIcon.png in Resources */,
 				292D302D1A991E5800BCF2A7 /* humIcon2.png in Resources */,
+				894055CF1A993CE100CE5744 /* Discussions.png in Resources */,
 				292D302C1A991E5800BCF2A7 /* sciIcon2.png in Resources */,
 				89D726C21A9852740024F1A0 /* Main.storyboard in Resources */,
 				89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */,
@@ -336,6 +343,7 @@
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
 				89D727021A98FA0C0024F1A0 /* bigcircle.png in Resources */,
 				89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */,
+				894055D01A993CE100CE5744 /* PeopleAround.png in Resources */,
 				2966F8D31A98ECFA003C96C5 /* humanitiesIcon.png in Resources */,
 				89D726FE1A98B90F0024F1A0 /* lo7l2E3.png in Resources */,
 				292D30361A9925CA00BCF2A7 /* humIcon2Selected.png in Resources */,

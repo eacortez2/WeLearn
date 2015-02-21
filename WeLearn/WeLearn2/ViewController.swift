@@ -19,6 +19,8 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var temp = self.rootRef.childByAppendingPath("users")
+        temp.unauth()
         // Do any additional setup after loading the view, typically from a nib.
         var rootRef = Firebase(url:"https://welearnhackpoly.firebaseio.com")
         // Write data to Firebase
