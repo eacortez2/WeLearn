@@ -18,7 +18,7 @@ class ProfileViewController: UITableViewController {
     
     @IBAction func goBackFromProfileToMatches(sender: AnyObject) {
         
-        self.performSegueWithIdentifier("returnToAroundMe", sender: self)
+        self.performSegueWithIdentifier("returnToAroundMeFromChat", sender: self)
     }
     
 //    @IBAction func goBackFromProfileToMatches(segue: UIStoryboardSegue) {

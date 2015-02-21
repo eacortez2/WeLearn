@@ -353,7 +353,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Confirm Profile" id="Kaw-CW-eHd">
                         <barButtonItem key="backBarButtonItem" title="Cancel" id="aGX-OI-Kz0"/>
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kTs-Jh-Fyc"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="kTs-Jh-Fyc">
+                            <connections>
+                                <action selector="cancelProfileEdit:" destination="4qP-gV-7mm" id="P1W-gf-89I"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="enE-lT-jse">
                             <connections>
                                 <action selector="doneAddingProfile:" destination="4qP-gV-7mm" id="3SN-Mf-A8w"/>
@@ -366,11 +370,12 @@
                         <outlet property="name" destination="77q-f1-VSY" id="A1u-ne-8gA"/>
                         <outlet property="profilePic" destination="vgG-Yg-Qsf" id="Coi-8A-Mcx"/>
                         <outlet property="universityLabel" destination="vO6-SQ-LjQ" id="bB2-qK-3Y0"/>
+                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="toAroundMeFromConfirmProfile" id="WmD-sh-OfH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwQ-Jx-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1012.5" y="-793.5"/>
+            <point key="canvasLocation" x="-1187.5" y="-904.5"/>
         </scene>
         <!--Major Picker View Controller-->
         <scene sceneID="RJu-Ld-Nhz">
@@ -670,7 +675,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.5" y="-100.5"/>
+            <point key="canvasLocation" x="96.5" y="-242.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
@@ -762,7 +767,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llq-NN-jP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1683.5" y="391.5"/>
+            <point key="canvasLocation" x="-1841.5" y="545.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="2Md-oY-K4H">
@@ -791,7 +796,7 @@
         <image name="pics.png" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kbf-sh-4TM"/>
+        <segue reference="WmD-sh-OfH"/>
         <segue reference="XSQ-VJ-5kx"/>
     </inferredMetricsTieBreakers>
 </document>

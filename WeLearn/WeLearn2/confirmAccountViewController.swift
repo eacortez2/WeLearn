@@ -20,10 +20,15 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var universityLabel: UILabel!
     
-    @IBAction func goBackFromProfileToMatches(segue: UIStoryboardSegue) {
+    @IBAction func cancelProfileEdit(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("toAroundMeFromConfirmProfile", sender: self)
     }
     
+    
     @IBAction func doneAddingProfile(segue: UIStoryboardSegue) {
+        
+        self.performSegueWithIdentifier("toAroundMeFromConfirmProfile", sender: self)
         
     }
     
