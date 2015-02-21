@@ -25,7 +25,9 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         picker.sourceType = .PhotoLibrary //3
         
         
+        picker.modalPresentationStyle = .Popover
         presentViewController(picker, animated: true, completion: nil)//4
+        picker.popoverPresentationController?.barButtonItem = sender as UIBarButtonItem
         
     }
     
