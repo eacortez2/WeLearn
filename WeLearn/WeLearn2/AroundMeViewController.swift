@@ -8,11 +8,14 @@
 
 import UIKit
 
-class AroundMeViewController: UITableViewController {
+class AroundMeViewController: UITableViewController, UITableViewDataSource {
 
+    @IBOutlet var tableViewData: UITableView!
     //temporary for testing before FireBase hookup
     let students: [FireBaseUser] = fakeData
+    var nearByPeople:[FireBaseUser] = []
     var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
+    var count: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +28,9 @@ class AroundMeViewController: UITableViewController {
             newUser.bio = snapshot.value["bio"] as NSString
             newUser.provider = snapshot.value["provider"] as NSString
             newUser.rep = snapshot.value["rep"] as Int
-            
-            println("\(newUser.name)")
+            self.nearByPeople.append(newUser)
+            self.tableViewData.reloadData()
+            //println("\(newUser.name)")
             
         })
 
@@ -53,14 +57,14 @@ class AroundMeViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return students.count
+        return nearByPeople.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("StudentMatchCell", forIndexPath: indexPath) as StudentMatchCell
 
-        let student = students[indexPath.row] as FireBaseUser
+        let student = nearByPeople[indexPath.row] as FireBaseUser
         
         cell.nameLabel.text = student.name
         cell.majorLabel.text = student.major
