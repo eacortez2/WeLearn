@@ -15,6 +15,8 @@ class ProfileViewController: UITableViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var bioLabel: UILabel!
     
+    @IBAction func goBackFromProfileToMatches(segue: UIStoryboardSegue) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

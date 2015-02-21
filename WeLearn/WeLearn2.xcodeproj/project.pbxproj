@@ -152,11 +152,8 @@
 				747892E61A98A26600121CAC /* StudentMatchCell.swift */,
 				742BA1BC1A98A562004F780E /* StudentData.swift */,
 				2958BC2D1A98B4B40036FE47 /* ChatViewController.swift */,
-<<<<<<< HEAD
 				74A95CA51A98BC6800694619 /* ProfileViewController.swift */,
-=======
 				29E006461A98C0D100F123F1 /* ChatCell.swift */,
->>>>>>> origin/master
 			);
 			path = WeLearn2;
 			sourceTree = "<group>";

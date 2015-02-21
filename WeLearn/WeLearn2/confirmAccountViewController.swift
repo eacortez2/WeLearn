@@ -15,7 +15,10 @@ class confirmAccountViewController: UITableViewController {
     @IBOutlet weak var bio: UITextView!
     @IBOutlet weak var profilePic: UIView!
     
-    @IBAction func doneAddingProfile(sender: UIBarButtonItem) {
+    @IBAction func goBackFromProfileToMatches(segue: UIStoryboardSegue) {
+    }
+    
+    @IBAction func doneAddingProfile(segue: UIStoryboardSegue) {
         
         
         
