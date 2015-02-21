@@ -436,7 +436,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Around You" id="a5K-Ls-geX"/>
                     <connections>
-                        <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromMatches" id="WN1-fv-4xI"/>
+                        <segue destination="iWq-2T-p1z" kind="presentation" identifier="toBioFromAroundMe" id="qB3-pa-PK5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kSw-VS-D6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -565,10 +565,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.5" y="-97.5"/>
+            <point key="canvasLocation" x="314.5" y="-98.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
@@ -682,7 +685,8 @@
         <image name="lo7l2E3.png" width="270" height="183"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j0E-fc-dLE"/>
         <segue reference="KjK-Ko-zrp"/>
+        <segue reference="j0E-fc-dLE"/>
+        <segue reference="NIr-h9-ngH"/>
     </inferredMetricsTieBreakers>
 </document>

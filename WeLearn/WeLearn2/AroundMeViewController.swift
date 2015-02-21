@@ -57,7 +57,7 @@ class AroundMeViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        self.performSegueWithIdentifier("toChatFromMatches", sender: self)
+        self.performSegueWithIdentifier("toBioFromAroundMe", sender: self)
         
     }
     
