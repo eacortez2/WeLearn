@@ -19,6 +19,7 @@
 		89D726E31A9852D20024F1A0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E21A9852D20024F1A0 /* CFNetwork.framework */; };
 		89D726E51A9852DC0024F1A0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E41A9852DC0024F1A0 /* Security.framework */; };
 		89D726E71A9852E50024F1A0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */; };
+		89D726F21A9877B50024F1A0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726F11A9877B50024F1A0 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		89D726E41A9852DC0024F1A0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		89D726E81A9853040024F1A0 /* WeLearn2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeLearn2-Bridging-Header.h"; sourceTree = "<group>"; };
+		89D726F11A9877B50024F1A0 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				89D726E11A9852CC0024F1A0 /* libc++.dylib in Frameworks */,
 				89D726DF1A9852C50024F1A0 /* libicucore.dylib in Frameworks */,
 				89D726DD1A9852A60024F1A0 /* Firebase.framework in Frameworks */,
+				89D726F21A9877B50024F1A0 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 		89D726AE1A9852740024F1A0 = {
 			isa = PBXGroup;
 			children = (
+				89D726F11A9877B50024F1A0 /* FacebookSDK.framework */,
 				89D726E61A9852E50024F1A0 /* SystemConfiguration.framework */,
 				89D726E41A9852DC0024F1A0 /* Security.framework */,
 				89D726E21A9852D20024F1A0 /* CFNetwork.framework */,
@@ -446,6 +450,7 @@
 				89D726D81A9852740024F1A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		89D726D91A9852740024F1A0 /* Build configuration list for PBXNativeTarget "WeLearn2Tests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +459,7 @@
 				89D726DB1A9852740024F1A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
