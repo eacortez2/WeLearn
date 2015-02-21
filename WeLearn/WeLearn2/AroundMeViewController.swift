@@ -37,9 +37,14 @@ class AroundMeViewController: UITableViewController, UITableViewDataSource {
             newUser.bio = snapshot.value["bio"] as NSString
             newUser.provider = snapshot.value["provider"] as NSString
             newUser.rep = snapshot.value["rep"] as Int
-            self.nearByPeople.append(newUser)
-            self.tableViewData.reloadData()
-            println("\(newUser.photo)")
+            newUser.userID = snapshot.value["userID"] as NSString
+            if(newUser.userID != rootUser.userID){
+                self.nearByPeople.append(newUser)
+                self.tableViewData.reloadData()
+                println("\(newUser.photo)")
+            }else {
+                println("Don't add because root user.")
+            }
             //println("\(newUser.name)")
             
         })
