@@ -695,20 +695,6 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HHb-pp-rdi" id="bYd-qT-CQG">
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQi-Kw-oG1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
-                                                    <connections>
-                                                        <segue destination="Ova-SY-8Uq" kind="embed" id="Zij-VM-Okf"/>
-                                                    </connections>
-                                                </containerView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="HQi-Kw-oG1" firstAttribute="centerY" secondItem="bYd-qT-CQG" secondAttribute="centerY" id="AQE-hH-zwd"/>
-                                                <constraint firstAttribute="trailing" secondItem="HQi-Kw-oG1" secondAttribute="trailing" id="kdd-P4-o98"/>
-                                                <constraint firstItem="HQi-Kw-oG1" firstAttribute="top" secondItem="bYd-qT-CQG" secondAttribute="top" id="qfm-xY-cat"/>
-                                                <constraint firstItem="HQi-Kw-oG1" firstAttribute="leading" secondItem="bYd-qT-CQG" secondAttribute="leading" id="vZk-OH-8ir"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -856,69 +842,6 @@
             </objects>
             <point key="canvasLocation" x="-415.5" y="-100.5"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="DA9-wj-qHa">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ova-SY-8Uq" customClass="UICollectionViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ETL-eO-Vrv"/>
-                        <viewControllerLayoutGuide type="bottom" id="lYq-d5-mbd"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FUe-hS-G0V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J53-BU-m1V">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V0Z-tr-VFA">
-                                    <size key="itemSize" width="90" height="90"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ipT-BT-U5G" customClass="BadgeCollectionViewCell" customModule="WeLearn2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cR4-1B-DvY">
-                                                    <rect key="frame" x="24" y="34" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="Ova-SY-8Uq" id="A8n-Ro-omo"/>
-                                    <outlet property="delegate" destination="Ova-SY-8Uq" id="YE0-WT-1Ud"/>
-                                </connections>
-                            </collectionView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="J53-BU-m1V" secondAttribute="trailing" id="Knr-XD-NQ0"/>
-                            <constraint firstItem="J53-BU-m1V" firstAttribute="top" secondItem="ETL-eO-Vrv" secondAttribute="bottom" id="ORT-mB-26N"/>
-                            <constraint firstItem="J53-BU-m1V" firstAttribute="bottom" secondItem="lYq-d5-mbd" secondAttribute="top" id="UK3-vq-oJJ"/>
-                            <constraint firstItem="J53-BU-m1V" firstAttribute="leading" secondItem="FUe-hS-G0V" secondAttribute="leading" id="iXq-pE-VjZ"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <connections>
-                        <outlet property="collectionView" destination="J53-BU-m1V" id="ZhB-j8-dTB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h1G-AT-HHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="282.5" y="434.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
@@ -932,6 +855,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oU0-pS-dez"/>
-        <segue reference="82j-qH-k3H"/>
+        <segue reference="LAT-S7-KHp"/>
     </inferredMetricsTieBreakers>
 </document>
