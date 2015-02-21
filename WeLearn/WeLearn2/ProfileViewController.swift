@@ -33,6 +33,10 @@ class ProfileViewController: UITableViewController {
     
     override func viewDidLoad() {
         
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: (152/255), blue: 0, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        
         super.viewDidLoad()
         profileImage.profileID = profile.userID
         nameLabel.text = profile.name

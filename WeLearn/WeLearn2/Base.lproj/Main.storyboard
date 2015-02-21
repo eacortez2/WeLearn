@@ -857,7 +857,7 @@
         <image name="pics.png" width="90" height="90"/>
         <image name="scienceIcon.png" width="202" height="202"/>
     </resources>
-    <inferredMetricsTieBreakers>å
+    <inferredMetricsTieBreakers>
         <segue reference="oU0-pS-dez"/>
         <segue reference="LAT-S7-KHp"/>
     </inferredMetricsTieBreakers>
