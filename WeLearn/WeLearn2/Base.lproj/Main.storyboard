@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -440,7 +440,6 @@
             </objects>
             <point key="canvasLocation" x="-1156.5" y="391.5"/>
         </scene>
-        <!--Chat View Controller-->
         <!--Profile-->
         <scene sceneID="Vr6-3S-9Lg">
             <objects>
@@ -568,7 +567,7 @@
             </objects>
             <point key="canvasLocation" x="518.5" y="-97.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
             <objects>
                 <viewController id="XX7-bl-1An" customClass="ChatViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
@@ -584,7 +583,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="107" id="n72-yq-F53">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celltest" rowHeight="107" id="n72-yq-F53">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n72-yq-F53" id="rpp-dV-Puh">
@@ -612,7 +611,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-Wz-zLg">
-                                <rect key="frame" x="16" y="629" width="89" height="30"/>
+                                <rect key="frame" x="16" y="520" width="89" height="30"/>
                                 <state key="normal" title="&lt; Around Me">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -631,7 +630,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-hr-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293.5" y="683.5"/>
+            <point key="canvasLocation" x="-281.5" y="684.5"/>
         </scene>
         <!--Around Me-->
         <scene sceneID="dsi-61-E9v">
