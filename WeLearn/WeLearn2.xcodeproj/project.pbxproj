@@ -64,6 +64,10 @@
 		89D727071A991DE90024F1A0 /* confirmAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892D81A987AAE00121CAC /* confirmAccountViewController.swift */; };
 		89F27C3E1A9940370081002F /* Discussions copysmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C3D1A9940370081002F /* Discussions copysmall.png */; };
 		89F27C401A9940960081002F /* PeopleAround copysmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C3F1A9940960081002F /* PeopleAround copysmall.png */; };
+		89F27C421A9947790081002F /* realsmallppl.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C411A9947790081002F /* realsmallppl.png */; };
+		89F27C441A99481F0081002F /* mapicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C431A99481F0081002F /* mapicon.png */; };
+		89F27C471A994A4C0081002F /* DiscussionsBW.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C451A994A4C0081002F /* DiscussionsBW.png */; };
+		89F27C481A994A4C0081002F /* PeopleAroundBW.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C461A994A4C0081002F /* PeopleAroundBW.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +139,10 @@
 		89D727051A991BE60024F1A0 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = user.swift; path = WeLearn2/user.swift; sourceTree = "<group>"; };
 		89F27C3D1A9940370081002F /* Discussions copysmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Discussions copysmall.png"; sourceTree = "<group>"; };
 		89F27C3F1A9940960081002F /* PeopleAround copysmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PeopleAround copysmall.png"; sourceTree = "<group>"; };
+		89F27C411A9947790081002F /* realsmallppl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = realsmallppl.png; sourceTree = "<group>"; };
+		89F27C431A99481F0081002F /* mapicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapicon.png; sourceTree = "<group>"; };
+		89F27C451A994A4C0081002F /* DiscussionsBW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DiscussionsBW.png; sourceTree = "<group>"; };
+		89F27C461A994A4C0081002F /* PeopleAroundBW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PeopleAroundBW.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,10 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
+				89F27C451A994A4C0081002F /* DiscussionsBW.png */,
+				89F27C461A994A4C0081002F /* PeopleAroundBW.png */,
+				89F27C431A99481F0081002F /* mapicon.png */,
+				89F27C411A9947790081002F /* realsmallppl.png */,
 				89F27C3D1A9940370081002F /* Discussions copysmall.png */,
 				894055CD1A993CE100CE5744 /* Discussions.png */,
 				894055CE1A993CE100CE5744 /* PeopleAround.png */,
@@ -350,6 +362,7 @@
 				2958BC2C1A98B47A0036FE47 /* chatBubble.png in Resources */,
 				2966F8D21A98ECFA003C96C5 /* artIcon.png in Resources */,
 				296A53C31A993C2100FACDAD /* path149.png in Resources */,
+				89F27C481A994A4C0081002F /* PeopleAroundBW.png in Resources */,
 				292D302D1A991E5800BCF2A7 /* humIcon2.png in Resources */,
 				894055CF1A993CE100CE5744 /* Discussions.png in Resources */,
 				292D302C1A991E5800BCF2A7 /* sciIcon2.png in Resources */,
@@ -363,9 +376,11 @@
 				292D302E1A991E5800BCF2A7 /* artIcon2.png in Resources */,
 				2966F8D41A98ECFA003C96C5 /* scienceIcon.png in Resources */,
 				296A53C41A993C2100FACDAD /* path427.png in Resources */,
+				89F27C421A9947790081002F /* realsmallppl.png in Resources */,
 				292D302F1A991E5800BCF2A7 /* logoRed.png in Resources */,
 				89D727001A98EB610024F1A0 /* pics.png in Resources */,
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
+				89F27C471A994A4C0081002F /* DiscussionsBW.png in Resources */,
 				89D727021A98FA0C0024F1A0 /* bigcircle.png in Resources */,
 				89F27C3E1A9940370081002F /* Discussions copysmall.png in Resources */,
 				89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */,
@@ -376,6 +391,7 @@
 				296A53C71A993C2D00FACDAD /* pathLOGOpng.png in Resources */,
 				292D30361A9925CA00BCF2A7 /* humIcon2Selected.png in Resources */,
 				89D726C41A9852740024F1A0 /* Images.xcassets in Resources */,
+				89F27C441A99481F0081002F /* mapicon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

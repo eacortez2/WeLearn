@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Discussion-->
+        <!--Discussions-->
         <scene sceneID="h4d-13-BCQ">
             <objects>
                 <viewController id="MaL-si-19M" customClass="QuestionIndexViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
@@ -130,7 +130,7 @@
                             <constraint firstItem="LjZ-8H-DVW" firstAttribute="top" secondItem="jxg-4k-7s3" secondAttribute="bottom" constant="8" id="Qvc-mf-oGa"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discussion" image="Discussions copysmall.png" selectedImage="Discussions copysmall.png" id="QuW-1Y-plM"/>
+                    <tabBarItem key="tabBarItem" title="Discussions" image="DiscussionsBW.png" selectedImage="Discussions copysmall.png" id="QuW-1Y-plM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="currCategoryIcon" destination="YPS-XH-WKK" id="EcX-pE-dOs"/>
@@ -855,11 +855,11 @@
             </objects>
             <point key="canvasLocation" x="-274.5" y="743.5"/>
         </scene>
-        <!--Around Me-->
+        <!--Around You-->
         <scene sceneID="dsi-61-E9v">
             <objects>
                 <navigationController id="4dY-Ys-Kh0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Around Me" image="PeopleAround copysmall.png" selectedImage="PeopleAround copysmall.png" id="4RQ-d0-siY"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Around You" image="PeopleAroundBW.png" id="4RQ-d0-siY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="llM-14-RiR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -898,8 +898,9 @@
     </scenes>
     <resources>
         <image name="Discussions copysmall.png" width="35" height="35"/>
+        <image name="DiscussionsBW.png" width="32" height="26"/>
         <image name="NewSplashBackground.png" width="473" height="697"/>
-        <image name="PeopleAround copysmall.png" width="35" height="35"/>
+        <image name="PeopleAroundBW.png" width="32" height="27"/>
         <image name="artIcon2.png" width="212" height="206"/>
         <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
