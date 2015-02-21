@@ -8,7 +8,7 @@
         <!--Discussion-->
         <scene sceneID="h4d-13-BCQ">
             <objects>
-                <viewController id="MaL-si-19M" sceneMemberID="viewController">
+                <viewController id="MaL-si-19M" customClass="QuestionIndexViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iK1-L7-rUw"/>
                         <viewControllerLayoutGuide type="bottom" id="Ios-08-vyH"/>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxg-4k-7s3">
-                                <rect key="frame" x="0.0" y="57" width="375" height="520"/>
+                                <rect key="frame" x="0.0" y="57" width="375" height="474"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="115" id="IOJ-CX-cOt" customClass="QuestionIndexCell" customModule="WeLearn2" customModuleProvider="target">
@@ -73,15 +73,47 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-8H-DVW">
+                                <rect key="frame" x="121" y="539" width="132" height="30"/>
+                                <state key="normal" title="Post New Question">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postNewQuestionFromIndex:" destination="MaL-si-19M" eventType="touchUpInside" id="s2N-f3-kx4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discussion" id="QuW-1Y-plM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="jxg-4k-7s3" id="S5z-Mv-Vhf"/>
+                        <segue destination="G9H-m0-sos" kind="presentation" identifier="postNewFromIndex" id="aPc-IS-YCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p46-5h-laq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1394.5" y="1296.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iST-fM-Ewg">
+            <objects>
+                <viewController id="G9H-m0-sos" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6mz-Ns-bgF"/>
+                        <viewControllerLayoutGuide type="bottom" id="1HV-uU-aAi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePF-a1-RCX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dvf-Vy-E1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-828.5" y="1296.5"/>
         </scene>
         <!--Around Me-->
         <scene sceneID="ufo-e7-oAi">
