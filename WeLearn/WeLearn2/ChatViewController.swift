@@ -31,7 +31,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
-        
+        self.tableView.rowHeight = 44
         
         
     }
@@ -54,27 +54,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as QuestionIndexCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as ChatTableCell
         
-        var imageName = UIImage(named: imageAssetAry[indexPath.row])
-        cell.subjectIcon.image = imageName
-        
-        //        cell.subjectLabel.text = questionSubjectAry[indexPath.row]
-        
-        cell.taglineLabel.text = taglineAry[indexPath.row]
-        
-        //        cell.posterIdLabel.text = posterIdAry[indexPath.row]
-        
-        cell.timeDateLabel.text = "test date"
-        
-        cell.answeredStatusLabel.text = "not answered"
-        
-        cell.numRepliesLabel.text = "0 replies"
-        
+ 
         return cell
     }
     
-    
+
     
     
     @IBAction func returnToAroundMe(sender: AnyObject) {

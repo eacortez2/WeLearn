@@ -69,7 +69,7 @@ class AroundMeViewController: UITableViewController, UITableViewDataSource {
         
         cell.nameLabel.text = student.name
         cell.majorLabel.text = student.major
-        cell.cellPicture.profileID = student.photo as NSString
+        //cell.cellPicture.profileID = student.photo as NSString
         
         return cell
     }
