@@ -14,8 +14,11 @@ class ProfileViewController: UITableViewController {
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var profileImage: FBProfilePictureView!
     @IBOutlet weak var bioLabel: UILabel!
-    var profile: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
-    
+    //var profile:  FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+    var profileID:String = ""
+    var name: String = ""
+    var bio: String = ""
+    var major: String = ""
     
     @IBAction func goBackFromProfileToMatches(sender: AnyObject) {
         
@@ -33,11 +36,16 @@ class ProfileViewController: UITableViewController {
     
     override func viewDidLoad() {
         
+        
         super.viewDidLoad()
-        profileImage.profileID = profile.userID
-        nameLabel.text = profile.name
-        bioLabel.text = profile.bio
-        majorLabel.text = profile.major
+        profileImage.profileID = profileID
+        nameLabel.text = name
+        bioLabel.text = bio
+        majorLabel.text = major
+//        profileImage.profileID = profile.userID
+//        nameLabel.text = profile.name
+//        bioLabel.text = profile.bio
+//        majorLabel.text = profile.major
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
