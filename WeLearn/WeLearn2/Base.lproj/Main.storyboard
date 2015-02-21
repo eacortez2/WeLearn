@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -192,8 +192,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MaL-si-19M" kind="relationship" relationship="viewControllers" id="3vF-At-zYG"/>
                         <segue destination="4dY-Ys-Kh0" kind="relationship" relationship="viewControllers" id="oU0-pS-dez"/>
+                        <segue destination="MaL-si-19M" kind="relationship" relationship="viewControllers" id="3vF-At-zYG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pD0-ph-5Vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -400,7 +400,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-4E-qck">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-4E-qck">
                                             <rect key="frame" x="8" y="8" width="75" height="75"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -485,11 +485,11 @@
             </objects>
             <point key="canvasLocation" x="-695.5" y="387.5"/>
         </scene>
-        <!--Item-->
+        <!--Around Me-->
         <scene sceneID="dsi-61-E9v">
             <objects>
-                <navigationController toolbarHidden="NO" id="4dY-Ys-Kh0" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4RQ-d0-siY"/>
+                <navigationController id="4dY-Ys-Kh0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Around Me" id="4RQ-d0-siY"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="llM-14-RiR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -511,6 +511,6 @@
         <image name="8PoutVe-1.png" width="471" height="695"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3vF-At-zYG"/>
+        <segue reference="j0E-fc-dLE"/>
     </inferredMetricsTieBreakers>
 </document>
