@@ -30,6 +30,11 @@ class user {
         self.bio = bio
         self.badges = []
         self.radius = 5  //default is a 5 mile radius
+        
+        
+    func incrementRep(){
+            rep++
+        }
     }
 
 }
