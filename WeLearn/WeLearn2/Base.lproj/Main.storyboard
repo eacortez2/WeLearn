@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -443,7 +443,6 @@
             </objects>
             <point key="canvasLocation" x="-1156.5" y="391.5"/>
         </scene>
-        <!--Chat View Controller-->
         <!--Profile-->
         <scene sceneID="Vr6-3S-9Lg">
             <objects>
@@ -569,9 +568,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="226.5" y="-98.5"/>
+            <point key="canvasLocation" x="518.5" y="-97.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
             <objects>
                 <viewController id="XX7-bl-1An" customClass="ChatViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
@@ -679,8 +678,8 @@
     </scenes>
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
-        <image name="lo7l2E3.png" width="270" height="183"/>
         <image name="chatBubble.png" width="740" height="134"/>
+        <image name="lo7l2E3.png" width="270" height="183"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="j0E-fc-dLE"/>
