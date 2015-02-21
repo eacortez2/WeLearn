@@ -19,13 +19,14 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBOutlet var tableView: UITableView!
     
-    var stringRef = "https://welearnhackpoly.firebaseio.com/discussions"
+    var stringRef = "https://welearnhackpoly.firebaseio.com/discussions/"
     
     var artRefAdd = "art/"
     var humanitiesRefAdd = "humanities/"
     var scienceRefAdd = "science/"
     
     
+    @IBOutlet var currCategoryIcon: UIImageView!
     
     
     override func viewDidLoad() {
@@ -34,12 +35,12 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         
-        var defaultRef = stringRef + scienceRefAdd
+        var defaultRef = stringRef + artRefAdd
         
         // Create a reference to a Firebase location
         var myRootRef = Firebase(url:defaultRef)
         // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        myRootRef.childByAppendingPath("question1").setValue("test value")
         
         
         
@@ -47,25 +48,41 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
     
     
     
+    var artImage = UIImage(named: "artIcon2.png")
+    var humanitiesImage = UIImage(named: "humIcon2.png")
+    var scienceImage = UIImage(named: "sciIcon2.png")
+    
     
     @IBAction func viewArtQuestions(sender: AnyObject) {
         
+        var myRootRef = Firebase(url:stringRef + artRefAdd)
+        // Write data to Firebase
+        myRootRef.childByAppendingPath("question1").setValue("test value")
         
+        currCategoryIcon.image = artImage
         
     }
     
     
     @IBAction func viewHumanitiesQuestions(sender: AnyObject) {
         
+        var myRootRef = Firebase(url:stringRef + humanitiesRefAdd)
+        // Write data to Firebase
+        myRootRef.childByAppendingPath("question1").setValue("test value")
         
+        currCategoryIcon.image = humanitiesImage
         
     }
 
     
     @IBAction func viewScienceQuestions(sender: AnyObject) {
         
-        
+        var myRootRef = Firebase(url:stringRef + scienceRefAdd)
+        // Write data to Firebase
+        myRootRef.childByAppendingPath("question1").setValue("test value")
     
+        currCategoryIcon.image = scienceImage
+        
     }
     
     
