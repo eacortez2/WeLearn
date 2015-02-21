@@ -511,6 +511,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cellPicture" destination="cdy-4E-qck" id="nXp-QG-6ku"/>
                                     <outlet property="majorLabel" destination="cou-cC-z1z" id="aDg-gr-9C1"/>
                                     <outlet property="nameLabel" destination="GKp-SZ-zob" id="FeW-p0-qXu"/>
                                 </connections>

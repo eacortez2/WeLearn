@@ -12,6 +12,7 @@ class StudentMatchCell: UITableViewCell {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var majorLabel: UILabel!
+    @IBOutlet weak var cellPicture: FBProfilePictureView!
     
     
     override func awakeFromNib() {
