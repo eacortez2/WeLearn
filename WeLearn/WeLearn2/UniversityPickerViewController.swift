@@ -18,6 +18,10 @@ class UniversityPickerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if let university = selectedUniversity {
+            selectedUniversityIndex = find(universities, university)!
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -46,7 +50,7 @@ class UniversityPickerViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MajorCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("UniversityCell", forIndexPath: indexPath) as UITableViewCell
         
         cell.textLabel?.text = universities[indexPath.row]
         
@@ -77,7 +81,7 @@ class UniversityPickerViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SaveSelectedMajor" {
+        if segue.identifier == "SaveSelectedUniversity" {
             let cell = sender as UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)
             selectedUniversityIndex = indexPath?.row

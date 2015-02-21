@@ -16,6 +16,10 @@ class MajorPickerViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let major = selectedMajor {
+            selectedMajorIndex = find(majors, major)!
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -31,12 +31,25 @@ class confirmAccountViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         majorLabel.text = major
+        universityLabel.text = university
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    if segue.identifier == "PickMajor" {
+//    let majorPickerViewController = segue.destinationViewController as MajorPickerViewController
+//    majorPickerViewController.selectedMajor = major
+//    }
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "SaveMajorDetail" {
+//            major = 
+//                Player(name: nameTextField.text, game:game, rating: 1)
+//        }
+//    }
     
     
     @IBAction func selectedMajor(segue:UIStoryboardSegue) {
@@ -48,8 +61,8 @@ class confirmAccountViewController: UITableViewController {
     }
     
     @IBAction func selectedUniversity(segue:UIStoryboardSegue) {
-        let universityPickerViewController = segue.sourceViewController as MajorPickerViewController
-        if let selectedUniversity = universityPickerViewController.selectedMajor {
+        let universityPickerViewController = segue.sourceViewController as UniversityPickerViewController
+        if let selectedUniversity = universityPickerViewController.selectedUniversity {
             universityLabel.text = selectedUniversity
             university = selectedUniversity
         }
