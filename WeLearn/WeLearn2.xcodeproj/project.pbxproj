@@ -17,6 +17,7 @@
 		747892D91A987AAE00121CAC /* confirmAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892D81A987AAE00121CAC /* confirmAccountViewController.swift */; };
 		747892E51A98983C00121CAC /* AroundMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892E41A98983C00121CAC /* AroundMeViewController.swift */; };
 		747892E71A98A26600121CAC /* StudentMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892E61A98A26600121CAC /* StudentMatchCell.swift */; };
+		74A95CA61A98BC6800694619 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A95CA51A98BC6800694619 /* ProfileViewController.swift */; };
 		89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BC1A9852740024F1A0 /* AppDelegate.swift */; };
 		89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BE1A9852740024F1A0 /* ViewController.swift */; };
 		89D726C21A9852740024F1A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C01A9852740024F1A0 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		747892D81A987AAE00121CAC /* confirmAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmAccountViewController.swift; sourceTree = "<group>"; };
 		747892E41A98983C00121CAC /* AroundMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundMeViewController.swift; sourceTree = "<group>"; };
 		747892E61A98A26600121CAC /* StudentMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentMatchCell.swift; sourceTree = "<group>"; };
+		74A95CA51A98BC6800694619 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		89D726B71A9852740024F1A0 /* WeLearn2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLearn2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D726BB1A9852740024F1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D726BC1A9852740024F1A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				747892E61A98A26600121CAC /* StudentMatchCell.swift */,
 				742BA1BC1A98A562004F780E /* StudentData.swift */,
 				2958BC2D1A98B4B40036FE47 /* ChatViewController.swift */,
+				74A95CA51A98BC6800694619 /* ProfileViewController.swift */,
 			);
 			path = WeLearn2;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				2958BC281A9892220036FE47 /* PostNewQuestionViewController.swift in Sources */,
 				747892E71A98A26600121CAC /* StudentMatchCell.swift in Sources */,
 				747892E51A98983C00121CAC /* AroundMeViewController.swift in Sources */,
+				74A95CA61A98BC6800694619 /* ProfileViewController.swift in Sources */,
 				2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */,
 				89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */,
 				89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */,

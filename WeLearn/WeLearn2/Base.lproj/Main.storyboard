@@ -446,7 +446,7 @@
         <!--Profile-->
         <scene sceneID="Vr6-3S-9Lg">
             <objects>
-                <tableViewController id="iWq-2T-p1z" sceneMemberID="viewController">
+                <tableViewController id="iWq-2T-p1z" customClass="ProfileViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="FHb-Rg-mG4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,10 +565,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="DWn-Nq-2wK" id="s2y-Qo-liG"/>
+                        <outlet property="majorLabel" destination="Mca-KC-Vxr" id="5vG-YA-Kuf"/>
+                        <outlet property="nameLabel" destination="OpG-Mq-Aw3" id="Ctv-ez-4A1"/>
+                        <outlet property="profileImage" destination="nt8-zZ-nxV" id="7Ti-Ef-jUV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.5" y="-97.5"/>
+            <point key="canvasLocation" x="218.5" y="-98.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
