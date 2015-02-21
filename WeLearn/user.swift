@@ -21,11 +21,13 @@ class FireBaseUser {
     var radius: Int
     var provider: String
     var email: String
+    var userID: String
+    var school: String
     
     
     init(name: String, major: String, photo:String, bio: String){
         self.name = name
-        self.major = major
+        self.major = "Computer Science"
         self.photo = photo
         self.rep = 0
         self.location = []
@@ -34,6 +36,8 @@ class FireBaseUser {
         self.radius = 5  //default is a 5 mile radius
         self.provider=""
         self.email = ""
+        self.userID = ""
+        self.school = "Santa Barbara City College"
     }
     
         

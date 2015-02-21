@@ -81,7 +81,7 @@ class UniversityPickerViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SaveSelectedUniversity" {
+        if segue.identifier == "returnUniversity" {
             let cell = sender as UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)
             selectedUniversityIndex = indexPath?.row

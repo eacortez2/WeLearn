@@ -305,6 +305,9 @@
                                                     <rect key="frame" x="8" y="5" width="160" height="160"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bigcirclebetter.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bnx-9m-oVY">
+                                                    <rect key="frame" x="8" y="5" width="160" height="160"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -429,7 +432,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hXn-o9-0rl" kind="unwind" unwindAction="selectedMajor:" id="qcV-Cd-7wW"/>
+                                    <segue destination="hXn-o9-0rl" kind="unwind" identifier="returnMajor" unwindAction="selectedMajor:" id="wLN-gL-aci"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -468,7 +471,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="2v2-IU-z4Z" kind="unwind" unwindAction="selectedUniversity:" id="bMC-Va-FBI"/>
+                                    <segue destination="2v2-IU-z4Z" kind="unwind" identifier="returnUniversity" unwindAction="selectedUniversity:" id="bMC-Va-FBI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -880,6 +883,7 @@
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
         <image name="artIcon.png" width="202" height="202"/>
+        <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
         <image name="humanitiesIcon.png" width="202" height="202"/>
         <image name="lo7l2E3.png" width="270" height="183"/>

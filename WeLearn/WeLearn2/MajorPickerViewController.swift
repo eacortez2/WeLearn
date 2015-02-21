@@ -80,7 +80,7 @@ class MajorPickerViewController: UITableViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "SaveSelectedMajor" {
+        if segue.identifier == "returnMajor" {
             let cell = sender as UITableViewCell
             let indexPath = tableView.indexPathForCell(cell)
             selectedMajorIndex = indexPath?.row

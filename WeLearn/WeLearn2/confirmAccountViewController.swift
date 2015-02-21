@@ -20,6 +20,7 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var profilePic: FBProfilePictureView!
     @IBOutlet weak var majorLabel: UILabel!
     @IBOutlet weak var universityLabel: UILabel!
+    var rootRef = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
     
     @IBAction func cancelProfileEdit(sender: AnyObject) {
         
@@ -29,6 +30,29 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func doneAddingProfile(segue: UIStoryboardSegue) {
         rootUser.bio = bio.text
+        for key in keys {
+            if (rootUser.userID == key){            //that is the root user on the database
+                var rootFireBaseRef = rootRef.childByAppendingPath(rootUser.userID)
+                let updatedRootUserFirebase = [
+                "provider": rootUser.provider,
+                "email": rootUser.email,
+                "first_name": rootUser.name,
+                "major": rootUser.major,
+                "school": rootUser.school,
+                "photoID": rootUser.photo,
+                "rep": rootUser.rep,
+                "location": rootUser.location,
+                "bio": rootUser.bio,
+                "badges": rootUser.badges,
+                "provider": rootUser.provider,
+                "userID": rootUser.userID
+                ]
+                rootFireBaseRef.setValue(updatedRootUserFirebase)
+            } else {
+                println("Could not find profile in database")
+            }
+        }
+        
         self.performSegueWithIdentifier("toAroundMeFromConfirmProfile", sender: self)
         
     }
@@ -42,6 +66,8 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
         universityLabel.text = university
         profilePic.profileID = rootUser.photo
         ActualNameField.text = rootUser.name
+        majorLabel.text = rootUser.major
+        universityLabel.text = rootUser.school
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,17 +81,17 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
     }
     
     
-//    if segue.identifier == "PickMajor" {
-//    let majorPickerViewController = segue.destinationViewController as MajorPickerViewController
-//    majorPickerViewController.selectedMajor = major
-//    }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "SaveMajorDetail" {
-//            major = 
-//                Player(name: nameTextField.text, game:game, rating: 1)
-//        }
-//    }
+   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+       if segue.identifier == "returnMajor" {
+        println("SAVING MAJOR DETAIL")
+           majorLabel.text = major
+      }
+        if segue.identifier == "PickMajor" {
+                let majorPickerViewController = segue.destinationViewController as MajorPickerViewController
+                majorPickerViewController.selectedMajor = major
+        }
+  }
     func textFieldDidBeginEditing(textField: UITextField) {
        textField.placeholder = nil
     }
@@ -80,6 +106,7 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
         if let selectedMajor = majorPickerViewController.selectedMajor {
             majorLabel.text = selectedMajor
             major = selectedMajor
+            rootUser.major = major
         }
     }
     
@@ -88,6 +115,7 @@ class confirmAccountViewController: UITableViewController, UITextFieldDelegate {
         if let selectedUniversity = universityPickerViewController.selectedUniversity {
             universityLabel.text = selectedUniversity
             university = selectedUniversity
+            rootUser.school = university
         }
     }
     

@@ -9,6 +9,7 @@
 import UIKit
 
 var rootUser: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+var keys = [String]()
 
 class ViewController: UIViewController, FBLoginViewDelegate {
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -34,7 +35,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser){
         var downloadGroup = dispatch_group_create()
         var userID:String = ""
-        var keys = [String]()
+        //var keys = [String]()
         var keyCount: UInt = 0
         var accountAlreadyCreated = false
         var rootRef = Firebase(url:"https://welearnhackpoly.firebaseio.com")
@@ -54,6 +55,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                     rootUser.email = authData.providerData["email"] as String
                     rootUser.name = user.first_name as String
                     rootUser.photo = user.objectID
+                    rootUser.userID = userID
                     var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
                     ref.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
                         keyCount++
@@ -81,6 +83,7 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                         newUserTest.email = authData.providerData["email"] as String
                         newUserTest.name = user.first_name as String
                         newUserTest.photo = user.objectID
+                        newUserTest.userID = userID
                         
 //                        rootUser.provider = authData.provider
 //                        rootUser.email = authData.providerData["email"] as String
@@ -92,12 +95,14 @@ class ViewController: UIViewController, FBLoginViewDelegate {
                             "email": newUserTest.email,
                             "first_name": newUserTest.name,
                             "major": newUserTest.major,
+                            "school": newUserTest.school,
                             "photoID": newUserTest.photo,
                             "rep": newUserTest.rep,
                             "location": newUserTest.location,
                             "bio": newUserTest.bio,
                             "badges": newUserTest.badges,
                             "provider": authData.provider,
+                            "userID": newUserTest.userID
                             //"email": authData.providerData["email"] as NSString,
                             //"first_name": user.first_name as NSString
                         ]

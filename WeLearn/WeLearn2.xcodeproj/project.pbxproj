@@ -43,6 +43,8 @@
 		89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */; };
 		89D726FE1A98B90F0024F1A0 /* lo7l2E3.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */; };
 		89D727001A98EB610024F1A0 /* pics.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D726FF1A98EB610024F1A0 /* pics.png */; };
+		89D727021A98FA0C0024F1A0 /* bigcircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D727011A98FA0C0024F1A0 /* bigcircle.png */; };
+		89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D727031A98FB770024F1A0 /* bigcirclebetter.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "8PoutVe-1.png"; sourceTree = "<group>"; };
 		89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lo7l2E3.png; sourceTree = "<group>"; };
 		89D726FF1A98EB610024F1A0 /* pics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pics.png; sourceTree = "<group>"; };
+		89D727011A98FA0C0024F1A0 /* bigcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigcircle.png; sourceTree = "<group>"; };
+		89D727031A98FB770024F1A0 /* bigcirclebetter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigcirclebetter.png; path = ../bigcirclebetter.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
+				89D727031A98FB770024F1A0 /* bigcirclebetter.png */,
+				89D727011A98FA0C0024F1A0 /* bigcircle.png */,
 				89D726FF1A98EB610024F1A0 /* pics.png */,
 				89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */,
 				89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */,
@@ -297,6 +303,8 @@
 				2966F8D41A98ECFA003C96C5 /* scienceIcon.png in Resources */,
 				89D727001A98EB610024F1A0 /* pics.png in Resources */,
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
+				89D727021A98FA0C0024F1A0 /* bigcircle.png in Resources */,
+				89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */,
 				2966F8D31A98ECFA003C96C5 /* humanitiesIcon.png in Resources */,
 				89D726FE1A98B90F0024F1A0 /* lo7l2E3.png in Resources */,
 				89D726C41A9852740024F1A0 /* Images.xcassets in Resources */,
