@@ -206,7 +206,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyl-H9-76E">
                                 <rect key="frame" x="137" y="87" width="100" height="100"/>
-                                <state key="normal" title="Button" image="humanitiesIcon.png">
+                                <state key="normal" title="Button" image="humIcon2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -215,7 +215,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-52-eIe">
                                 <rect key="frame" x="259" y="87" width="100" height="100"/>
-                                <state key="normal" title="Button" image="scienceIcon.png">
+                                <state key="normal" title="Button" image="sciIcon2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -224,7 +224,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-lx-QGw">
                                 <rect key="frame" x="16" y="87" width="100" height="100"/>
-                                <state key="normal" title="Button" image="artIcon.png">
+                                <state key="normal" title="Button" image="artIcon2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -236,8 +236,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="artButton" destination="A5d-lx-QGw" id="8D1-NV-PEH"/>
+                        <outlet property="humButton" destination="nyl-H9-76E" id="U4N-30-zXW"/>
                         <outlet property="myImage" destination="0VP-QC-V7W" id="QMl-4d-kJd"/>
                         <outlet property="postYourQuestionLabel" destination="lHK-Bn-HNh" id="sYK-NZ-hZL"/>
+                        <outlet property="sciButton" destination="aCh-52-eIe" id="uLo-V0-afH"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="TSe-6C-7Re"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToIndexFromNewQuestion" id="XSQ-VJ-5kx"/>
                     </connections>
@@ -849,16 +852,16 @@
     </scenes>
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
-        <image name="artIcon.png" width="202" height="202"/>
+        <image name="artIcon2.png" width="212" height="206"/>
         <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
-        <image name="humanitiesIcon.png" width="202" height="202"/>
+        <image name="humIcon2.png" width="217" height="202"/>
         <image name="lo7l2E3.png" width="270" height="183"/>
         <image name="pics.png" width="90" height="90"/>
-        <image name="scienceIcon.png" width="202" height="202"/>
+        <image name="sciIcon2.png" width="210" height="219"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oU0-pS-dez"/>
-        <segue reference="LAT-S7-KHp"/>
+        <segue reference="XSQ-VJ-5kx"/>
     </inferredMetricsTieBreakers>
 </document>
