@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -96,10 +96,10 @@
             </objects>
             <point key="canvasLocation" x="-1394.5" y="1296.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Post New Question View Controller-->
         <scene sceneID="iST-fM-Ewg">
             <objects>
-                <viewController id="G9H-m0-sos" sceneMemberID="viewController">
+                <viewController id="G9H-m0-sos" customClass="PostNewQuestionViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6mz-Ns-bgF"/>
                         <viewControllerLayoutGuide type="bottom" id="1HV-uU-aAi"/>
@@ -136,24 +136,49 @@
                                 <state key="normal" title="Photo From Library">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="photoFromLibrary:" destination="G9H-m0-sos" eventType="touchUpInside" id="UnL-jf-5sI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAk-jP-sk2">
                                 <rect key="frame" x="247" y="261" width="112" height="30"/>
                                 <state key="normal" title="Take New Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="shootPhoto:" destination="G9H-m0-sos" eventType="touchUpInside" id="57T-Jr-sCV"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-QC-V7W">
                                 <rect key="frame" x="16" y="299" width="339" height="262"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oz-gk-uyj">
+                                <rect key="frame" x="124" y="569" width="126" height="30"/>
+                                <state key="normal" title="Post my Question!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeI-tb-O1I">
+                                <rect key="frame" x="133" y="607" width="109" height="30"/>
+                                <state key="normal" title="Cancel My Post">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToQuestionIndex:" destination="G9H-m0-sos" eventType="touchUpInside" id="Vpd-Wv-HNA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myImage" destination="0VP-QC-V7W" id="QMl-4d-kJd"/>
+                        <segue destination="MaL-si-19M" kind="presentation" identifier="returnToIndexFromNewQuestion" id="j0E-fc-dLE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvf-Vy-E1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-828.5" y="1296.5"/>
+            <point key="canvasLocation" x="-969.5" y="1296.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XCm-k4-EkE">
@@ -374,7 +399,7 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-4E-qck">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-4E-qck">
                                             <rect key="frame" x="8" y="8" width="75" height="75"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -426,4 +451,7 @@
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="j0E-fc-dLE"/>
+    </inferredMetricsTieBreakers>
 </document>
