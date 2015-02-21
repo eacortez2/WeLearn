@@ -62,6 +62,8 @@
 		89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */ = {isa = PBXBuildFile; fileRef = 89D727031A98FB770024F1A0 /* bigcirclebetter.png */; };
 		89D727061A991BE60024F1A0 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D727051A991BE60024F1A0 /* user.swift */; };
 		89D727071A991DE90024F1A0 /* confirmAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892D81A987AAE00121CAC /* confirmAccountViewController.swift */; };
+		89F27C3E1A9940370081002F /* Discussions copysmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C3D1A9940370081002F /* Discussions copysmall.png */; };
+		89F27C401A9940960081002F /* PeopleAround copysmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F27C3F1A9940960081002F /* PeopleAround copysmall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +133,8 @@
 		89D727011A98FA0C0024F1A0 /* bigcircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigcircle.png; sourceTree = "<group>"; };
 		89D727031A98FB770024F1A0 /* bigcirclebetter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigcirclebetter.png; path = ../bigcirclebetter.png; sourceTree = "<group>"; };
 		89D727051A991BE60024F1A0 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = user.swift; path = WeLearn2/user.swift; sourceTree = "<group>"; };
+		89F27C3D1A9940370081002F /* Discussions copysmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Discussions copysmall.png"; sourceTree = "<group>"; };
+		89F27C3F1A9940960081002F /* PeopleAround copysmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PeopleAround copysmall.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,12 +192,14 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
+				89F27C3D1A9940370081002F /* Discussions copysmall.png */,
 				894055CD1A993CE100CE5744 /* Discussions.png */,
 				894055CE1A993CE100CE5744 /* PeopleAround.png */,
 				89D727031A98FB770024F1A0 /* bigcirclebetter.png */,
 				89D727011A98FA0C0024F1A0 /* bigcircle.png */,
 				89D726FF1A98EB610024F1A0 /* pics.png */,
 				89D726FD1A98B90F0024F1A0 /* lo7l2E3.png */,
+				89F27C3F1A9940960081002F /* PeopleAround copysmall.png */,
 				89D726F51A9888FD0024F1A0 /* 8PoutVe-1.png */,
 				2958BC2B1A98B47A0036FE47 /* chatBubble.png */,
 				2966F8CF1A98ECFA003C96C5 /* artIcon.png */,
@@ -351,6 +357,7 @@
 				89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */,
 				292D30371A9925CA00BCF2A7 /* sciIcon2Selected.png in Resources */,
 				292D30351A9925CA00BCF2A7 /* artIcon2Selected.png in Resources */,
+				89F27C401A9940960081002F /* PeopleAround copysmall.png in Resources */,
 				296A53C91A993C9200FACDAD /* NewSplashBackground.png in Resources */,
 				292D30311A99234700BCF2A7 /* SplashBackground.png in Resources */,
 				292D302E1A991E5800BCF2A7 /* artIcon2.png in Resources */,
@@ -360,6 +367,7 @@
 				89D727001A98EB610024F1A0 /* pics.png in Resources */,
 				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
 				89D727021A98FA0C0024F1A0 /* bigcircle.png in Resources */,
+				89F27C3E1A9940370081002F /* Discussions copysmall.png in Resources */,
 				89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */,
 				894055D01A993CE100CE5744 /* PeopleAround.png in Resources */,
 				296A53C51A993C2100FACDAD /* path3941.png in Resources */,
