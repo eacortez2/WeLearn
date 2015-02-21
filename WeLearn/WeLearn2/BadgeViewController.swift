@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BadgesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class BadgeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     @IBOutlet weak var collectionView : UICollectionView!
     var badgeArray: [String]! = []
@@ -17,7 +17,7 @@ class BadgesViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     func loadImages(){
         var sourcePath = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("Assets")
-        self.badgeArray = NSFileManager.defaultManager().contentsOfDirectoryAtPath(sourcePath, error: NSError.self)
+       // self.badgeArray = NSFileManager.defaultManager().contentsOfDirectoryAtPath(sourcePath, error: NilLiteralConvertible.self)
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -27,6 +27,14 @@ class BadgesViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.badgeArray.count
     }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("BadgeCell", forIndexPath: indexPath) as UICollectionViewCell
+        
+        return cell
+    }
+    
+    
     
     
     
