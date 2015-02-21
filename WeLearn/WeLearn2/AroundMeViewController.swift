@@ -8,7 +8,7 @@
 
 import UIKit
 
-class aroundMeViewController: UITableViewController {
+class AroundMeViewController: UITableViewController {
 
     //temporary for testing before FireBase hookup
     let students: [FireBaseUser] = fakeData
