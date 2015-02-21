@@ -9,7 +9,7 @@
 import Foundation
 
 
-class FireBaseUser {
+class user {
     
     var name: String
     var major: String
@@ -19,9 +19,6 @@ class FireBaseUser {
     var bio: String
     var badges: [String]
     var radius: Int
-    var provider: String
-    var email: String
-    
     
     
     init(name: String, major: String, photo:String, bio: String){
@@ -33,16 +30,11 @@ class FireBaseUser {
         self.bio = bio
         self.badges = []
         self.radius = 5  //default is a 5 mile radius
-        self.provider = " "
-        self.email = " "
-    }
-    
+        
+        
     func incrementRep(){
-        rep++
-    }
-    
-    func decrementRep(){
-        rep--
+            rep++
+        }
     }
 
 }

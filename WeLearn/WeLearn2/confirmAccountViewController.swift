@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class confirmAccountViewController: UITableViewController, UITableViewDelegate {
+class confirmAccountViewController: UITableViewController {
     
     @IBOutlet weak var name: UITableViewCell!
     @IBOutlet weak var bio: UITextView!
@@ -20,7 +20,6 @@ class confirmAccountViewController: UITableViewController, UITableViewDelegate {
         
         
     }
-    
     
     
     override func viewDidLoad() {
