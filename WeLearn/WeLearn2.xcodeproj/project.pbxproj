@@ -17,10 +17,10 @@
 		2966F8D31A98ECFA003C96C5 /* humanitiesIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2966F8D01A98ECFA003C96C5 /* humanitiesIcon.png */; };
 		2966F8D41A98ECFA003C96C5 /* scienceIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2966F8D11A98ECFA003C96C5 /* scienceIcon.png */; };
 		29E006471A98C0D100F123F1 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E006461A98C0D100F123F1 /* ChatCell.swift */; };
-		742995341A991E3600449FEB /* confirmAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892D81A987AAE00121CAC /* confirmAccountViewController.swift */; };
-		742995351A991F0700449FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C01A9852740024F1A0 /* Main.storyboard */; };
-		742995361A991F0B00449FEB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C51A9852740024F1A0 /* LaunchScreen.xib */; };
-		745973F01A991C3D00439587 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745973EF1A991C3D00439587 /* user.swift */; };
+		74347D501A9913F500EB0418 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		74347D541A99143400EB0418 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		745973EE1A99185C00439587 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		7460B4BF1A98F709002E16E5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		747892E51A98983C00121CAC /* AroundMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892E41A98983C00121CAC /* AroundMeViewController.swift */; };
 		747892E71A98A26600121CAC /* StudentMatchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892E61A98A26600121CAC /* StudentMatchCell.swift */; };
 		74A95CA61A98BC6800694619 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A95CA51A98BC6800694619 /* ProfileViewController.swift */; };
@@ -28,7 +28,9 @@
 		74C669201A98D9E4008D5BA8 /* UniversityPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C6691F1A98D9E4008D5BA8 /* UniversityPickerViewController.swift */; };
 		89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BC1A9852740024F1A0 /* AppDelegate.swift */; };
 		89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BE1A9852740024F1A0 /* ViewController.swift */; };
+		89D726C21A9852740024F1A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C01A9852740024F1A0 /* Main.storyboard */; };
 		89D726C41A9852740024F1A0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C31A9852740024F1A0 /* Images.xcassets */; };
+		89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C51A9852740024F1A0 /* LaunchScreen.xib */; };
 		89D726D31A9852740024F1A0 /* WeLearn2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726D21A9852740024F1A0 /* WeLearn2Tests.swift */; };
 		89D726DD1A9852A60024F1A0 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726DC1A9852A60024F1A0 /* Firebase.framework */; };
 		89D726DF1A9852C50024F1A0 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D726DE1A9852C50024F1A0 /* libicucore.dylib */; };
@@ -67,7 +69,6 @@
 		2966F8D01A98ECFA003C96C5 /* humanitiesIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = humanitiesIcon.png; sourceTree = "<group>"; };
 		2966F8D11A98ECFA003C96C5 /* scienceIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scienceIcon.png; sourceTree = "<group>"; };
 		29E006461A98C0D100F123F1 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
-		745973EF1A991C3D00439587 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		747892D81A987AAE00121CAC /* confirmAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmAccountViewController.swift; sourceTree = "<group>"; };
 		747892E41A98983C00121CAC /* AroundMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundMeViewController.swift; sourceTree = "<group>"; };
 		747892E61A98A26600121CAC /* StudentMatchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentMatchCell.swift; sourceTree = "<group>"; };
@@ -176,7 +177,6 @@
 				2958BC271A9892220036FE47 /* PostNewQuestionViewController.swift */,
 				747892E41A98983C00121CAC /* AroundMeViewController.swift */,
 				747892E61A98A26600121CAC /* StudentMatchCell.swift */,
-				745973EF1A991C3D00439587 /* user.swift */,
 				2958BC2D1A98B4B40036FE47 /* ChatViewController.swift */,
 				74A95CA51A98BC6800694619 /* ProfileViewController.swift */,
 				29E006461A98C0D100F123F1 /* ChatCell.swift */,
@@ -295,15 +295,15 @@
 			files = (
 				2958BC2C1A98B47A0036FE47 /* chatBubble.png in Resources */,
 				2966F8D21A98ECFA003C96C5 /* artIcon.png in Resources */,
+				89D726C21A9852740024F1A0 /* Main.storyboard in Resources */,
 				89D726F61A9888FD0024F1A0 /* 8PoutVe-1.png in Resources */,
 				2966F8D41A98ECFA003C96C5 /* scienceIcon.png in Resources */,
 				89D727001A98EB610024F1A0 /* pics.png in Resources */,
+				89D726C71A9852740024F1A0 /* LaunchScreen.xib in Resources */,
 				89D727021A98FA0C0024F1A0 /* bigcircle.png in Resources */,
 				89D727041A98FB770024F1A0 /* bigcirclebetter.png in Resources */,
 				2966F8D31A98ECFA003C96C5 /* humanitiesIcon.png in Resources */,
 				89D726FE1A98B90F0024F1A0 /* lo7l2E3.png in Resources */,
-				742995351A991F0700449FEB /* Main.storyboard in Resources */,
-				742995361A991F0B00449FEB /* LaunchScreen.xib in Resources */,
 				89D726C41A9852740024F1A0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,18 +325,21 @@
 				89D727071A991DE90024F1A0 /* confirmAccountViewController.swift in Sources */,
 				2958BC2E1A98B4B40036FE47 /* ChatViewController.swift in Sources */,
 				2958BC281A9892220036FE47 /* PostNewQuestionViewController.swift in Sources */,
+				745973EE1A99185C00439587 /* (null) in Sources */,
 				747892E71A98A26600121CAC /* StudentMatchCell.swift in Sources */,
 				29E006471A98C0D100F123F1 /* ChatCell.swift in Sources */,
 				74C669201A98D9E4008D5BA8 /* UniversityPickerViewController.swift in Sources */,
-				742995341A991E3600449FEB /* confirmAccountViewController.swift in Sources */,
+				74347D501A9913F500EB0418 /* (null) in Sources */,
+				74347D541A99143400EB0418 /* (null) in Sources */,
+				7460B4BF1A98F709002E16E5 /* (null) in Sources */,
 				747892E51A98983C00121CAC /* AroundMeViewController.swift in Sources */,
 				74A95CA61A98BC6800694619 /* ProfileViewController.swift in Sources */,
+				2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */,
 				89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */,
 				2966F8CE1A98D3EB003C96C5 /* ChatTableCell.swift in Sources */,
-				745973F01A991C3D00439587 /* user.swift in Sources */,
+				89D727061A991BE60024F1A0 /* user.swift in Sources */,
 				89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */,
 				2958BC261A988A3B0036FE47 /* QuestionIndexViewController.swift in Sources */,
-				2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */,
 				74C6691E1A98D266008D5BA8 /* MajorPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
