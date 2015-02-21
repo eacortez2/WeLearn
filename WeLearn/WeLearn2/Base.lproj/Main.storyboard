@@ -310,7 +310,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="dAn-xG-hsz">
+                            <tableViewSection headerTitle="University" id="dAn-xG-hsz">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vO6-SQ-LjQ" style="IBUITableViewCellStyleDefault" id="lp6-ih-3M3">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -331,7 +331,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="" id="DJK-i2-vNM">
+                            <tableViewSection headerTitle="Major" id="DJK-i2-vNM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="324-Co-6xs" style="IBUITableViewCellStyleDefault" id="Qsn-HE-ItF">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -662,15 +662,18 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HHb-pp-rdi" id="bYd-qT-CQG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9b-Ux-vKj">
+                                                <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQi-Kw-oG1">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
-                                                </scrollView>
+                                                    <connections>
+                                                        <segue destination="Ova-SY-8Uq" kind="embed" id="Zij-VM-Okf"/>
+                                                    </connections>
+                                                </containerView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="v9b-Ux-vKj" firstAttribute="leading" secondItem="bYd-qT-CQG" secondAttribute="leading" id="T3G-WX-Iwm"/>
-                                                <constraint firstItem="v9b-Ux-vKj" firstAttribute="top" secondItem="bYd-qT-CQG" secondAttribute="top" id="gLB-us-PkK"/>
-                                                <constraint firstAttribute="trailing" secondItem="v9b-Ux-vKj" secondAttribute="trailing" id="gYd-59-7om"/>
-                                                <constraint firstItem="v9b-Ux-vKj" firstAttribute="centerY" secondItem="bYd-qT-CQG" secondAttribute="centerY" id="tKw-hO-zPG"/>
+                                                <constraint firstItem="HQi-Kw-oG1" firstAttribute="centerY" secondItem="bYd-qT-CQG" secondAttribute="centerY" id="AQE-hH-zwd"/>
+                                                <constraint firstAttribute="trailing" secondItem="HQi-Kw-oG1" secondAttribute="trailing" id="kdd-P4-o98"/>
+                                                <constraint firstItem="HQi-Kw-oG1" firstAttribute="top" secondItem="bYd-qT-CQG" secondAttribute="top" id="qfm-xY-cat"/>
+                                                <constraint firstItem="HQi-Kw-oG1" firstAttribute="leading" secondItem="bYd-qT-CQG" secondAttribute="leading" id="vZk-OH-8ir"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -818,6 +821,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzT-hx-lRV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-415.5" y="-100.5"/>
+        </scene>
+        <!--Badge View Controller-->
+        <scene sceneID="DA9-wj-qHa">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ova-SY-8Uq" customClass="BadgeViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ETL-eO-Vrv"/>
+                        <viewControllerLayoutGuide type="bottom" id="lYq-d5-mbd"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FUe-hS-G0V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J53-BU-m1V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="109"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="V0Z-tr-VFA">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ipT-BT-U5G" customClass="BadgeCollectionViewCell" customModule="WeLearn2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ova-SY-8Uq" id="A8n-Ro-omo"/>
+                                    <outlet property="delegate" destination="Ova-SY-8Uq" id="YE0-WT-1Ud"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="J53-BU-m1V" secondAttribute="trailing" id="Knr-XD-NQ0"/>
+                            <constraint firstItem="J53-BU-m1V" firstAttribute="top" secondItem="ETL-eO-Vrv" secondAttribute="bottom" id="ORT-mB-26N"/>
+                            <constraint firstItem="J53-BU-m1V" firstAttribute="bottom" secondItem="lYq-d5-mbd" secondAttribute="top" id="UK3-vq-oJJ"/>
+                            <constraint firstItem="J53-BU-m1V" firstAttribute="leading" secondItem="FUe-hS-G0V" secondAttribute="leading" id="iXq-pE-VjZ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="collectionView" destination="J53-BU-m1V" id="ZhB-j8-dTB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h1G-AT-HHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="282.5" y="302.5"/>
         </scene>
     </scenes>
     <resources>
