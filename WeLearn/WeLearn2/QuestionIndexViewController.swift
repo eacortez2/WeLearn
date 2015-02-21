@@ -11,20 +11,21 @@ import UIKit
 
 var currQuestionId:String = ""
 
+
+var imageAssetAryDict:[String:[UIImage]] = ["art":[], "humanities":[], "science":[]]
+
 class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
     @IBOutlet var tableView: UITableView!
     
-    var posterIdAry:[String] = ["test1", "test2", "test3", "test4", "test5"]
+    var stringRef = "https://welearnhackpoly.firebaseio.com/discussions"
     
-    var taglineAry:[String] = ["Comparing Jackson Pollock to Paul Klee", "Specific heat capacity of variable density rod", "Themes of betrayal in M. Butterfly", "Integration method for matrix of ODEs", "Question about GANTT charts"]
+    var artRefAdd = "art/"
+    var humanitiesRefAdd = "humanities/"
+    var scienceRefAdd = "science/"
     
-    var questionSubjectAry:[String] = ["ART 104", "PHYS 123", "ENG 111", "MATH 220", "CS 180"]
     
-    var imageAssetAry = ["acrylics.jpg", "BohrModel.png", "inkQuill.jpg", "integral.jpg", "linesOfCode.jpg"]
-    
-    //    var questionIndexAry:QuestionIndexCell = ["test question 1", "test question 2"]
     
     
     override func viewDidLoad() {
@@ -33,9 +34,42 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
         
+        var defaultRef = stringRef + scienceRefAdd
+        
+        // Create a reference to a Firebase location
+        var myRootRef = Firebase(url:defaultRef)
+        // Write data to Firebase
+        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        
         
         
     }
+    
+    
+    
+    
+    @IBAction func viewArtQuestions(sender: AnyObject) {
+        
+        
+        
+    }
+    
+    
+    @IBAction func viewHumanitiesQuestions(sender: AnyObject) {
+        
+        
+        
+    }
+
+    
+    @IBAction func viewScienceQuestions(sender: AnyObject) {
+        
+        
+    
+    }
+    
+    
+
     
     
     override func didReceiveMemoryWarning() {
@@ -51,26 +85,26 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.taglineAry.count
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as QuestionIndexCell
         
-        var imageName = UIImage(named: imageAssetAry[indexPath.row])
-        cell.subjectIcon.image = imageName
+//        var imageName = UIImage(named: imageAssetAry[indexPath.row])
+//        cell.subjectIcon.image = imageName
         
 //        cell.subjectLabel.text = questionSubjectAry[indexPath.row]
         
-        cell.taglineLabel.text = taglineAry[indexPath.row]
+//        cell.taglineLabel.text = taglineAry[indexPath.row]
         
 //        cell.posterIdLabel.text = posterIdAry[indexPath.row]
         
-        cell.timeDateLabel.text = "test date"
-        
-        cell.answeredStatusLabel.text = "not answered"
-        
-        cell.numRepliesLabel.text = "0 replies"
+//        cell.timeDateLabel.text = "test date"
+//        
+//        cell.answeredStatusLabel.text = "not answered"
+//        
+//        cell.numRepliesLabel.text = "0 replies"
         
         return cell
     }

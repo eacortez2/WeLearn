@@ -62,8 +62,6 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         picker.delegate = self
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "8PoutVe-1.png")!)
-        
         postYourQuestionLabel.font = UIFont.italicSystemFontOfSize(15.0)
         
     }
@@ -130,6 +128,13 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
     }
 
+    
+    @IBAction func postQuestion(sender: AnyObject) {
+        
+        
+        
+    }
+    
     
     
 }
