@@ -109,24 +109,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add a tagline to my question" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gl9-k2-sjp">
-                                <rect key="frame" x="16" y="42" width="343" height="30"/>
+                                <rect key="frame" x="16" y="20" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose my question topic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-gy-KUw">
-                                <rect key="frame" x="86" y="13" width="202" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose Question Topic:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-gy-KUw">
+                                <rect key="frame" x="95" y="58" width="184" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill in your question below and/or add a picture" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHK-Bn-HNh">
-                                <rect key="frame" x="20" y="96" width="335" height="21"/>
+                                <rect key="frame" x="20" y="192" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What is the true nature of a hackathon?" translatesAutoresizingMaskIntoConstraints="NO" id="7Cy-IK-Cng">
-                                <rect key="frame" x="16" y="125" width="343" height="128"/>
+                                <rect key="frame" x="16" y="221" width="343" height="101"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -135,7 +135,7 @@
                                 </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-OW-jTV">
-                                <rect key="frame" x="20" y="261" width="132" height="30"/>
+                                <rect key="frame" x="18" y="330" width="132" height="30"/>
                                 <state key="normal" title="Photo From Library">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAk-jP-sk2">
-                                <rect key="frame" x="247" y="261" width="112" height="30"/>
+                                <rect key="frame" x="243" y="330" width="112" height="30"/>
                                 <state key="normal" title="Take New Photo">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -153,21 +153,48 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-QC-V7W">
-                                <rect key="frame" x="16" y="299" width="339" height="262"/>
+                                <rect key="frame" x="18" y="368" width="339" height="239"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Oz-gk-uyj">
-                                <rect key="frame" x="124" y="569" width="126" height="30"/>
+                                <rect key="frame" x="124" y="605" width="126" height="30"/>
                                 <state key="normal" title="Post my Question!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeI-tb-O1I">
-                                <rect key="frame" x="133" y="607" width="109" height="30"/>
+                                <rect key="frame" x="133" y="629" width="109" height="30"/>
                                 <state key="normal" title="Cancel My Post">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="returnToQuestionIndex:" destination="G9H-m0-sos" eventType="touchUpInside" id="Vpd-Wv-HNA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyl-H9-76E">
+                                <rect key="frame" x="137" y="87" width="100" height="100"/>
+                                <state key="normal" title="Button" image="humanitiesIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseHumanitiesIcon:" destination="G9H-m0-sos" eventType="touchUpInside" id="fGN-fU-jHF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-52-eIe">
+                                <rect key="frame" x="259" y="87" width="100" height="100"/>
+                                <state key="normal" title="Button" image="scienceIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseScienceIcon:" destination="G9H-m0-sos" eventType="touchUpInside" id="0ao-lh-b4X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-lx-QGw">
+                                <rect key="frame" x="16" y="87" width="100" height="100"/>
+                                <state key="normal" title="Button" image="artIcon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseArtIcon:" destination="G9H-m0-sos" eventType="touchUpInside" id="Bzb-0F-zYG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,13 +203,14 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myImage" destination="0VP-QC-V7W" id="QMl-4d-kJd"/>
+                        <outlet property="postYourQuestionLabel" destination="lHK-Bn-HNh" id="sYK-NZ-hZL"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="TSe-6C-7Re"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToIndexFromNewQuestion" id="XSQ-VJ-5kx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dvf-Vy-E1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713.5" y="1070.5"/>
+            <point key="canvasLocation" x="-714.5" y="1098.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XCm-k4-EkE">
@@ -673,12 +701,12 @@
                         <outlet property="nameLabel" destination="OpG-Mq-Aw3" id="Ctv-ez-4A1"/>
                         <outlet property="profileImage" destination="nt8-zZ-nxV" id="7Ti-Ef-jUV"/>
                         <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
-                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="returnToAroundMeFromChat" id="rsK-Xt-HBO"/>
+                        <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="LAT-S7-KHp"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96.5" y="-242.5"/>
+            <point key="canvasLocation" x="81.5" y="-100.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="KKG-R7-3Ou">
@@ -770,7 +798,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llq-NN-jP2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1841.5" y="545.5"/>
+            <point key="canvasLocation" x="-1661.5" y="643.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="2Md-oY-K4H">
@@ -794,12 +822,15 @@
     </scenes>
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
+        <image name="artIcon.png" width="202" height="202"/>
         <image name="chatBubble.png" width="740" height="134"/>
+        <image name="humanitiesIcon.png" width="202" height="202"/>
         <image name="lo7l2E3.png" width="270" height="183"/>
         <image name="pics.png" width="90" height="90"/>
+        <image name="scienceIcon.png" width="202" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WmD-sh-OfH"/>
-        <segue reference="XSQ-VJ-5kx"/>
+        <segue reference="LAT-S7-KHp"/>
     </inferredMetricsTieBreakers>
 </document>

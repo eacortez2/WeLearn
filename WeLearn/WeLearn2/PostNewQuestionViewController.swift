@@ -16,6 +16,8 @@ import UIKit
 class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     
+    @IBOutlet var postYourQuestionLabel:UILabel!
+
     @IBOutlet var myImage: UIImageView!
     let picker = UIImagePickerController()
     
@@ -60,8 +62,42 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         picker.delegate = self
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "8PoutVe-1.png")!)
+        
+        postYourQuestionLabel.font = UIFont.italicSystemFontOfSize(15.0)
+        
     }
     
+    var iconChoiceDict:[String:Boolean] = ["art":0, "humanities":0, "science":0]
+    
+    
+    @IBAction func chooseArtIcon(sender: AnyObject) {
+        
+        iconChoiceDict["art"] = 1
+        iconChoiceDict["humanities"] = 0
+        iconChoiceDict["science"] = 0
+        println("art chosen")
+        
+    }
+    
+    @IBAction func chooseHumanitiesIcon(sender: AnyObject) {
+        
+        iconChoiceDict["art"] = 0
+        iconChoiceDict["humanities"] = 1
+        iconChoiceDict["science"] = 0
+        println("humanities chosen")
+        
+    }
+    
+   
+    @IBAction func chooseScienceIcon(sender: AnyObject) {
+        
+        iconChoiceDict["art"] = 0
+        iconChoiceDict["humanities"] = 0
+        iconChoiceDict["science"] = 1
+        println("science chosen")
+        
+    }
     
     
     override func didReceiveMemoryWarning() {
