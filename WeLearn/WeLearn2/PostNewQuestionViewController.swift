@@ -66,7 +66,20 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
     }
     
+    @IBOutlet var artButton: UIButton!
+    @IBOutlet var humButton: UIButton!
+    @IBOutlet var sciButton: UIButton!
+    
     var iconChoiceDict:[String:Boolean] = ["art":0, "humanities":0, "science":0]
+    
+    
+    var artImageUnselected = UIImage(named: "artIcon2.png")
+    var humImageUnselected = UIImage(named: "humIcon2.png")
+    var sciImageUnselected = UIImage(named: "sciIcon2.png")
+    
+    var artImageSelected = UIImage(named: "artIcon2Selected.png")
+    var humImageSelected = UIImage(named: "humIcon2Selected.png")
+    var sciImageSelected = UIImage(named: "sciIcon2Selected.png")
     
     
     @IBAction func chooseArtIcon(sender: AnyObject) {
@@ -74,7 +87,14 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         iconChoiceDict["art"] = 1
         iconChoiceDict["humanities"] = 0
         iconChoiceDict["science"] = 0
+        
         println("art chosen")
+        
+        artButton.setImage(artImageUnselected, forState: .Normal)
+        humButton.setImage(humImageUnselected, forState: .Normal)
+        sciButton.setImage(sciImageUnselected, forState: .Normal)
+        
+        
         
     }
     
@@ -85,6 +105,10 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         iconChoiceDict["science"] = 0
         println("humanities chosen")
         
+        artButton.setImage(artImageUnselected, forState: .Normal)
+        humButton.setImage(humImageSelected, forState: .Normal)
+        sciButton.setImage(sciImageUnselected, forState: .Normal)
+        
     }
     
    
@@ -94,6 +118,10 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         iconChoiceDict["humanities"] = 0
         iconChoiceDict["science"] = 1
         println("science chosen")
+        
+        artButton.setImage(artImageUnselected, forState: .Normal)
+        humButton.setImage(humImageUnselected, forState: .Normal)
+        sciButton.setImage(sciImageSelected, forState: .Normal)
         
     }
     

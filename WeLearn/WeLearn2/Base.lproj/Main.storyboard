@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="115" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jxg-4k-7s3">
-                                <rect key="frame" x="0.0" y="57" width="375" height="474"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="463"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionCell" rowHeight="115" id="IOJ-CX-cOt" customClass="QuestionIndexCell" customModule="WeLearn2" customModuleProvider="target">
@@ -74,7 +74,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjZ-8H-DVW">
-                                <rect key="frame" x="121" y="539" width="132" height="30"/>
+                                <rect key="frame" x="121" y="580" width="132" height="30"/>
                                 <state key="normal" title="Post New Question">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -83,7 +83,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUm-Gj-KKm">
-                                <rect key="frame" x="16" y="12" width="30" height="30"/>
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
                                 <state key="normal" title="Art">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -92,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCM-Oc-pdN">
-                                <rect key="frame" x="149" y="12" width="77" height="30"/>
+                                <rect key="frame" x="149" y="7" width="77" height="30"/>
                                 <state key="normal" title="Humanities">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -101,7 +101,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5c2-My-caE">
-                                <rect key="frame" x="304" y="12" width="55" height="30"/>
+                                <rect key="frame" x="304" y="7" width="55" height="30"/>
                                 <state key="normal" title="Science">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,19 +109,23 @@
                                     <action selector="viewScienceQuestions:" destination="MaL-si-19M" eventType="touchUpInside" id="FUK-x6-h87"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YPS-XH-WKK">
+                                <rect key="frame" x="152" y="31" width="70" height="70"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Discussion" id="QuW-1Y-plM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="currCategoryIcon" destination="YPS-XH-WKK" id="EcX-pE-dOs"/>
                         <outlet property="tableView" destination="jxg-4k-7s3" id="S5z-Mv-Vhf"/>
                         <segue destination="G9H-m0-sos" kind="presentation" identifier="postNewFromIndex" id="aPc-IS-YCW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p46-5h-laq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1373.5" y="1639.5"/>
+            <point key="canvasLocation" x="-1373.5" y="1636.5"/>
         </scene>
         <!--Post New Question View Controller-->
         <scene sceneID="iST-fM-Ewg">
@@ -202,7 +206,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyl-H9-76E">
                                 <rect key="frame" x="137" y="87" width="100" height="100"/>
-                                <state key="normal" title="Button" image="humanitiesIcon.png">
+                                <state key="normal" title="Button" image="humIcon2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -211,7 +215,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCh-52-eIe">
                                 <rect key="frame" x="259" y="87" width="100" height="100"/>
-                                <state key="normal" title="Button" image="scienceIcon.png">
+                                <state key="normal" title="Button" image="sciIcon2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -220,7 +224,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A5d-lx-QGw">
                                 <rect key="frame" x="16" y="87" width="100" height="100"/>
-                                <state key="normal" title="Button" image="artIcon.png">
+                                <state key="normal" title="Button" image="artIcon2.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -232,8 +236,11 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="artButton" destination="A5d-lx-QGw" id="8D1-NV-PEH"/>
+                        <outlet property="humButton" destination="nyl-H9-76E" id="U4N-30-zXW"/>
                         <outlet property="myImage" destination="0VP-QC-V7W" id="QMl-4d-kJd"/>
                         <outlet property="postYourQuestionLabel" destination="lHK-Bn-HNh" id="sYK-NZ-hZL"/>
+                        <outlet property="sciButton" destination="aCh-52-eIe" id="uLo-V0-afH"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="TSe-6C-7Re"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToIndexFromNewQuestion" id="XSQ-VJ-5kx"/>
                     </connections>
@@ -866,16 +873,16 @@
     </scenes>
     <resources>
         <image name="8PoutVe-1.png" width="471" height="695"/>
-        <image name="artIcon.png" width="202" height="202"/>
+        <image name="artIcon2.png" width="212" height="206"/>
         <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
-        <image name="humanitiesIcon.png" width="202" height="202"/>
+        <image name="humIcon2.png" width="217" height="202"/>
         <image name="lo7l2E3.png" width="270" height="183"/>
         <image name="pics.png" width="90" height="90"/>
-        <image name="scienceIcon.png" width="202" height="202"/>
+        <image name="sciIcon2.png" width="210" height="219"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oU0-pS-dez"/>
-        <segue reference="LAT-S7-KHp"/>
+        <segue reference="XSQ-VJ-5kx"/>
     </inferredMetricsTieBreakers>
 </document>
