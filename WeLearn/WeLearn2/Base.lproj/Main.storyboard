@@ -379,7 +379,7 @@
         <!--Around You-->
         <scene sceneID="JTm-7i-YNS">
             <objects>
-                <tableViewController id="faw-RG-BVq" customClass="aroundMeViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="faw-RG-BVq" customClass="AroundMeViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="jJG-SC-fLD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,7 +569,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.5" y="-97.5"/>
+            <point key="canvasLocation" x="226.5" y="-98.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="KKG-R7-3Ou">
