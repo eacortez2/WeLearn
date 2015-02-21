@@ -15,7 +15,19 @@ class ProfileViewController: UITableViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var bioLabel: UILabel!
     
-    @IBAction func goBackFromProfileToMatches(segue: UIStoryboardSegue) {
+    
+    @IBAction func goBackFromProfileToMatches(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("returnToAroundMe", sender: self)
+    }
+    
+//    @IBAction func goBackFromProfileToMatches(segue: UIStoryboardSegue) {
+//    }
+    
+    @IBAction func goToChat(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("toChatFromProfile", sender: self)
+        
     }
     
     override func viewDidLoad() {
