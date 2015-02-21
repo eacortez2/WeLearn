@@ -16,8 +16,24 @@ import UIKit
 class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     
+    var activeDiscussionType = ""
+    
+    var stringRef = "https://welearnhackpoly.firebaseio.com/discussions/"
+    
+    var artRefAdd = "art/"
+    var humanitiesRefAdd = "humanities/"
+    var scienceRefAdd = "science/"
+    
+    var myRootRef = Firebase(url:"https://welearnhackpoly.firebaseio.com/discussions/")
+    
+    @IBOutlet var questionText: UITextView!
+    @IBOutlet var questionTaglineText: UITextField!
+    
+    
     @IBOutlet var postYourQuestionLabel:UILabel!
 
+    var imageExists:BooleanType = false
+    
     @IBOutlet var myImage: UIImageView!
     let picker = UIImagePickerController()
     
@@ -41,6 +57,7 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.cameraCaptureMode = .Photo
             presentViewController(picker, animated: true, completion: nil)
+            imageExists = true
         } else {
             noCamera()
         }
@@ -64,6 +81,8 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         postYourQuestionLabel.font = UIFont.italicSystemFontOfSize(15.0)
         
+        
+        
     }
     
     @IBOutlet var artButton: UIButton!
@@ -77,9 +96,9 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
     var humImageUnselected = UIImage(named: "humIcon2.png")
     var sciImageUnselected = UIImage(named: "sciIcon2.png")
     
-    var artImageSelected = UIImage(named: "artIcon2Selected.png")
-    var humImageSelected = UIImage(named: "humIcon2Selected.png")
-    var sciImageSelected = UIImage(named: "sciIcon2Selected.png")
+    var artImageSelected = UIImage(named: "path3941.png")
+    var humImageSelected = UIImage(named: "path427.png")
+    var sciImageSelected = UIImage(named: "path149.png")
     
     
     @IBAction func chooseArtIcon(sender: AnyObject) {
@@ -90,10 +109,13 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         
         println("art chosen")
         
-        artButton.setImage(artImageUnselected, forState: .Normal)
+        artButton.setImage(artImageSelected, forState: .Normal)
         humButton.setImage(humImageUnselected, forState: .Normal)
         sciButton.setImage(sciImageUnselected, forState: .Normal)
         
+        activeDiscussionType = "art"
+        
+        myRootRef = Firebase(url:stringRef + artRefAdd)
         
         
     }
@@ -109,6 +131,10 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         humButton.setImage(humImageSelected, forState: .Normal)
         sciButton.setImage(sciImageUnselected, forState: .Normal)
         
+        activeDiscussionType = "humanities"
+        
+        myRootRef = Firebase(url:stringRef + humanitiesRefAdd)
+        
     }
     
    
@@ -122,6 +148,10 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         artButton.setImage(artImageUnselected, forState: .Normal)
         humButton.setImage(humImageUnselected, forState: .Normal)
         sciButton.setImage(sciImageSelected, forState: .Normal)
+        
+        activeDiscussionType = "science"
+        
+        myRootRef = Firebase(url:stringRef + scienceRefAdd)
         
     }
     
@@ -147,22 +177,81 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         myImage.image = chosenImage //4
         dismissViewControllerAnimated(true, completion: nil) //5
         
+        imageExists = true
+        
         
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        
+        
+        imageExists = false
         
         dismissViewControllerAnimated(true, completion: nil)
         
     }
 
     
+
+    
+    
     @IBAction func postQuestion(sender: AnyObject) {
         
+        println("posting question")
         
+        var tagLine = questionTaglineText.text
+        var userName = rootUser.name
+        var userId = rootUser.userID
+        
+        var imageUrl = ""
+        
+        if (imageExists) {
+            
+            println("image exists")
+        
+            imageUrl = parseTagLine(tagLine)
+            println("image url is: " + imageUrl)
+            
+            imageAssetAryDict[activeDiscussionType]?.append(myImage.image!)
+            
+            println(imageAssetAryDict)
+        }
+        
+        var discussionText = questionText.text
+        
+        
+        var discussionRef = myRootRef.childByAutoId()
+        
+        discussionRef.setValue(["tagLine":tagLine, "userName":userName,"userId":userId,"imageUrl":imageUrl,"discussionText":discussionText])
+        
+    self.performSegueWithIdentifier("returnToIndexFromNewQuestion", sender: self)
         
     }
     
+    
+    func parseTagLine(tagLine:String) -> String {
+        
+        var realTemp:[String] = []
+        var temp1 = tagLine.componentsSeparatedByString(" ")
+        for var i = 0; i < temp1.count; i++ {
+            
+            var temp2 = temp1[i].componentsSeparatedByString("'")
+            for var j = 0; j < temp2.count; j++ {
+                
+                realTemp.append(temp2[j])
+                
+            }
+        }
+        
+        var outputStr:String = ""
+        
+        for var i = 0; i < realTemp.count; i++ {
+            
+            outputStr += realTemp[i]
+            
+        }
+        return(outputStr)
+    }
     
     
 }
