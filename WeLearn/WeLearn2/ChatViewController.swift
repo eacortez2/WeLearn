@@ -12,6 +12,8 @@ import UIKit
 
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+        var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
+    var nearByPeople:[FireBaseUser] = []
     
     @IBOutlet var tableView: UITableView!
     
@@ -31,8 +33,22 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
+        self.tableView.rowHeight = 44
         
         
+        
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            var newUser: FireBaseUser =  FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
+            newUser.name = snapshot.value["first_name"] as NSString
+            newUser.email = snapshot.value["email"] as NSString
+            newUser.photo = snapshot.value["photoID"] as NSString
+            newUser.major = snapshot.value["major"] as NSString
+            newUser.bio = snapshot.value["bio"] as NSString
+            newUser.provider = snapshot.value["provider"] as NSString
+            newUser.rep = snapshot.value["rep"] as Int
+            self.nearByPeople.append(newUser)
+            
+        })
         
     }
     
@@ -54,27 +70,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as QuestionIndexCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as ChatTableCell
         
-        var imageName = UIImage(named: imageAssetAry[indexPath.row])
-        cell.subjectIcon.image = imageName
-        
-        //        cell.subjectLabel.text = questionSubjectAry[indexPath.row]
-        
-        cell.taglineLabel.text = taglineAry[indexPath.row]
-        
-        //        cell.posterIdLabel.text = posterIdAry[indexPath.row]
-        
-        cell.timeDateLabel.text = "test date"
-        
-        cell.answeredStatusLabel.text = "not answered"
-        
-        cell.numRepliesLabel.text = "0 replies"
-        
+ 
         return cell
     }
     
-    
+
     
     
     @IBAction func returnToAroundMe(sender: AnyObject) {
