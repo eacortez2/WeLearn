@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -662,7 +662,7 @@
                         <outlet property="nameLabel" destination="OpG-Mq-Aw3" id="Ctv-ez-4A1"/>
                         <outlet property="profileImage" destination="nt8-zZ-nxV" id="7Ti-Ef-jUV"/>
                         <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
-                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="returnToAroundMe" id="rsK-Xt-HBO"/>
+                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="returnToAroundMeFromChat" id="rsK-Xt-HBO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWW-yd-YQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -718,9 +718,10 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-Wz-zLg">
-                                <rect key="frame" x="16" y="520" width="89" height="30"/>
+                                <rect key="frame" x="270" y="520" width="89" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="&lt; Around Me">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="returnToAroundMe:" destination="XX7-bl-1An" eventType="touchUpInside" id="LGS-rE-r0T"/>
@@ -732,11 +733,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="p30-6Y-eRa" id="vUz-eh-UKu"/>
+                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="returnToAroundMe" id="kbf-sh-4TM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WRt-hr-sLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-257.5" y="733.5"/>
+            <point key="canvasLocation" x="-274.5" y="743.5"/>
         </scene>
         <!--Around Me-->
         <scene sceneID="dsi-61-E9v">
@@ -785,7 +787,7 @@
         <image name="lo7l2E3.png" width="270" height="183"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rsK-Xt-HBO"/>
+        <segue reference="kbf-sh-4TM"/>
         <segue reference="XSQ-VJ-5kx"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -78,7 +78,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func returnToAroundMe(sender: AnyObject) {
         
-        self.performSegueWithIdentifier("returnToAroundMeFromChat", sender: self)
+        self.performSegueWithIdentifier("returnToAroundMe", sender: self)
         
     }
     
