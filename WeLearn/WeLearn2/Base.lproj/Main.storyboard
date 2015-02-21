@@ -281,7 +281,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="8PoutVe-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-91-5HK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SplashBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-91-5HK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIj-si-6FZ" customClass="FBLoginView">
@@ -872,7 +872,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8PoutVe-1.png" width="471" height="695"/>
+        <image name="SplashBackground.png" width="472" height="696"/>
         <image name="artIcon2.png" width="212" height="206"/>
         <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
