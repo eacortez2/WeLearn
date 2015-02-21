@@ -44,10 +44,13 @@ class aroundMeViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("StudentMatchCell", forIndexPath: indexPath) as StudentMatchCell
 
+        let student = students[indexPath.row] as FireBaseUser
         
-
+        cell.nameLabel.text = student.name
+        cell.majorLabel.text = student.major
+        
         return cell
     }
     
