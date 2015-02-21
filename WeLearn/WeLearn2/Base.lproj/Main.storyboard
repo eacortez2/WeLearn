@@ -230,7 +230,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pD0-ph-5Vb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2210" y="714"/>
+            <point key="canvasLocation" x="-2310.5" y="845.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
@@ -402,12 +402,12 @@
                         <outlet property="name" destination="77q-f1-VSY" id="A1u-ne-8gA"/>
                         <outlet property="profilePic" destination="vgG-Yg-Qsf" id="Coi-8A-Mcx"/>
                         <outlet property="universityLabel" destination="vO6-SQ-LjQ" id="bB2-qK-3Y0"/>
-                        <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="toAroundMeFromConfirmProfile" id="WmD-sh-OfH"/>
+                        <segue destination="e5y-g4-BEc" kind="presentation" identifier="toAroundMeFromConfirmProfile" id="82j-qH-k3H"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwQ-Jx-1ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1187.5" y="-904.5"/>
+            <point key="canvasLocation" x="-1174.5" y="-712.5"/>
         </scene>
         <!--Major Picker View Controller-->
         <scene sceneID="RJu-Ld-Nhz">
@@ -600,35 +600,36 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DLv-3U-HFT" id="hww-6E-9YN">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nt8-zZ-nxV">
-                                                    <rect key="frame" x="8" y="20" width="160" height="160"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="160" id="cNz-TR-HBs"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-Mq-Aw3">
-                                                    <rect key="frame" x="174" y="121" width="340" height="40"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-KC-Vxr">
-                                                    <rect key="frame" x="176" y="153" width="350" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Major" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-KC-Vxr">
+                                                    <rect key="frame" x="191" y="155" width="180" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Less than 1 mile away..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmk-3I-B9E">
-                                                    <rect key="frame" x="174" y="108" width="164" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Less than 1 mile away..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zmk-3I-B9E">
+                                                    <rect key="frame" x="191" y="106" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r54-e5-seB" customClass="FBProfilePictureView">
+                                                    <rect key="frame" x="8" y="20" width="160" height="160"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpG-Mq-Aw3">
+                                                    <rect key="frame" x="191" y="121" width="340" height="40"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nt8-zZ-nxV" firstAttribute="top" secondItem="hww-6E-9YN" secondAttribute="topMargin" constant="12" id="BUw-EI-m8p"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="nt8-zZ-nxV" secondAttribute="bottom" constant="11.5" id="M2b-VL-cq4"/>
-                                                <constraint firstItem="nt8-zZ-nxV" firstAttribute="leading" secondItem="hww-6E-9YN" secondAttribute="leadingMargin" id="cSX-cE-8LA"/>
+                                                <constraint firstItem="Mca-KC-Vxr" firstAttribute="leading" secondItem="r54-e5-seB" secondAttribute="trailing" constant="8" symbolic="YES" id="5e2-6C-hvR"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="r54-e5-seB" secondAttribute="bottom" constant="11.5" id="BPj-00-hYO"/>
+                                                <constraint firstItem="r54-e5-seB" firstAttribute="leading" secondItem="hww-6E-9YN" secondAttribute="leadingMargin" id="T1X-kw-Y4r"/>
+                                                <constraint firstItem="Zmk-3I-B9E" firstAttribute="leading" secondItem="r54-e5-seB" secondAttribute="trailing" constant="6" id="X2y-8f-tOZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="r54-e5-seB" secondAttribute="trailing" constant="207" id="btp-B1-2vy"/>
+                                                <constraint firstItem="r54-e5-seB" firstAttribute="top" secondItem="hww-6E-9YN" secondAttribute="topMargin" constant="12" id="dbg-LG-43B"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -705,7 +706,7 @@
                         <outlet property="bioLabel" destination="DWn-Nq-2wK" id="s2y-Qo-liG"/>
                         <outlet property="majorLabel" destination="Mca-KC-Vxr" id="5vG-YA-Kuf"/>
                         <outlet property="nameLabel" destination="OpG-Mq-Aw3" id="Ctv-ez-4A1"/>
-                        <outlet property="profileImage" destination="nt8-zZ-nxV" id="7Ti-Ef-jUV"/>
+                        <outlet property="profileImage" destination="r54-e5-seB" id="2r9-0E-WJp"/>
                         <segue destination="XX7-bl-1An" kind="presentation" identifier="toChatFromProfile" id="Pty-Ov-hkC"/>
                         <segue destination="e5y-g4-BEc" kind="presentation" identifier="returnToAroundMeFromChat" id="LAT-S7-KHp"/>
                     </connections>
@@ -825,10 +826,10 @@
             </objects>
             <point key="canvasLocation" x="-415.5" y="-100.5"/>
         </scene>
-        <!--Badge View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="DA9-wj-qHa">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ova-SY-8Uq" customClass="BadgeViewController" customModule="WeLearn2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Ova-SY-8Uq" customClass="UICollectionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ETL-eO-Vrv"/>
                         <viewControllerLayoutGuide type="bottom" id="lYq-d5-mbd"/>
@@ -877,7 +878,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1G-AT-HHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282.5" y="302.5"/>
+            <point key="canvasLocation" x="282.5" y="434.5"/>
         </scene>
     </scenes>
     <resources>
@@ -891,7 +892,7 @@
         <image name="scienceIcon.png" width="202" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WmD-sh-OfH"/>
+        <segue reference="oU0-pS-dez"/>
         <segue reference="LAT-S7-KHp"/>
     </inferredMetricsTieBreakers>
 </document>

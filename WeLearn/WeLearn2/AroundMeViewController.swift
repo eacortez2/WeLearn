@@ -19,6 +19,7 @@ class AroundMeViewController: UITableViewController, UITableViewDataSource {
     var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
     var count: Int = 0
     var nearByPeople:[FireBaseUser] = []
+    var profileToShow: FireBaseUser = FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
     
     
     override func viewDidLoad() {
@@ -82,9 +83,17 @@ class AroundMeViewController: UITableViewController, UITableViewDataSource {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        var profileToShow = nearByPeople[indexPath.row]
+        
         self.performSegueWithIdentifier("toBioFromAroundMe", sender: self)
         
     }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "toBioFromAroundMe"{
+//            var profileViewController: ProfileViewController  = segue.destinationViewController as ProfileViewController
+//            profileViewController.profile = profileToShow
+//    }
+//    }
     
     /*
     // Override to support conditional editing of the table view.
