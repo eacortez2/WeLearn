@@ -10,6 +10,10 @@
 		2958BC221A9880B30036FE47 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2958BC211A9880B30036FE47 /* user.swift */; };
 		2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2958BC231A9885CA0036FE47 /* QuestionIndexCell.swift */; };
 		747892D91A987AAE00121CAC /* confirmAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892D81A987AAE00121CAC /* confirmAccountViewController.swift */; };
+<<<<<<< HEAD
+=======
+		747892DD1A98821B00121CAC /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747892DC1A98821B00121CAC /* user.swift */; };
+>>>>>>> origin/master
 		89D726BD1A9852740024F1A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BC1A9852740024F1A0 /* AppDelegate.swift */; };
 		89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89D726BE1A9852740024F1A0 /* ViewController.swift */; };
 		89D726C21A9852740024F1A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89D726C01A9852740024F1A0 /* Main.storyboard */; };
@@ -39,6 +43,7 @@
 		2958BC211A9880B30036FE47 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		2958BC231A9885CA0036FE47 /* QuestionIndexCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionIndexCell.swift; sourceTree = "<group>"; };
 		747892D81A987AAE00121CAC /* confirmAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmAccountViewController.swift; sourceTree = "<group>"; };
+		747892DC1A98821B00121CAC /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		89D726B71A9852740024F1A0 /* WeLearn2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeLearn2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89D726BB1A9852740024F1A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		89D726BC1A9852740024F1A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +118,6 @@
 		89D726B91A9852740024F1A0 /* WeLearn2 */ = {
 			isa = PBXGroup;
 			children = (
-				2958BC211A9880B30036FE47 /* user.swift */,
 				89D726BC1A9852740024F1A0 /* AppDelegate.swift */,
 				89D726BE1A9852740024F1A0 /* ViewController.swift */,
 				747892D81A987AAE00121CAC /* confirmAccountViewController.swift */,
@@ -251,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2958BC221A9880B30036FE47 /* user.swift in Sources */,
 				747892D91A987AAE00121CAC /* confirmAccountViewController.swift in Sources */,
 				2958BC241A9885CA0036FE47 /* QuestionIndexCell.swift in Sources */,
 				89D726BF1A9852740024F1A0 /* ViewController.swift in Sources */,
