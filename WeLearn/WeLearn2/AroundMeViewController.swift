@@ -27,9 +27,7 @@ class AroundMeViewController: UITableViewController, UITableViewDataSource {
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 1, green: (152/255), blue: 0, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 214/255, green: (214/255), blue: 214/255, alpha: 1.0)
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
-        self.tabBarController?.tabBarItem.image = UIImage(named: "PeopleAround copysmall.png")!.imageWithRenderingMode(.AlwaysOriginal)
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]        
         ref.observeEventType(.ChildAdded, withBlock: { snapshot in
             var newUser: FireBaseUser =  FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
             newUser.name = snapshot.value["first_name"] as NSString
