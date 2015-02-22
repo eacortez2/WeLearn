@@ -740,17 +740,53 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Badges" id="zFn-60-v9X">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="HHb-pp-rdi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="142" id="HHb-pp-rdi">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HHb-pp-rdi" id="bYd-qT-CQG">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CEi-z7-BHk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
-                                                    <connections>
-                                                        <segue destination="gDa-bW-7Dz" kind="embed" id="dbU-85-V2j"/>
-                                                    </connections>
-                                                </containerView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badge1.png" translatesAutoresizingMaskIntoConstraints="NO" id="b76-31-Vaw">
+                                                    <rect key="frame" x="8" y="8" width="80" height="80"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="script_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-1a-oDf">
+                                                    <rect key="frame" x="109" y="8" width="80" height="80"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toolbox_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="VZQ-8z-2bg">
+                                                    <rect key="frame" x="212" y="8" width="80" height="80"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="coffee_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="4BU-TC-ncS">
+                                                    <rect key="frame" x="310" y="8" width="80" height="80"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WD4-hw-p7H">
+                                                    <rect key="frame" x="20" y="85" width="56" height="41"/>
+                                                    <string key="text">Noobie
+</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfU-UO-ut2">
+                                                    <rect key="frame" x="224" y="86" width="61" height="50"/>
+                                                    <string key="text">Tutor's
+Toolkit</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKq-ES-uPi">
+                                                    <rect key="frame" x="317" y="87" width="66" height="41"/>
+                                                    <string key="text">All
+Nighter</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A+ Essay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g88-v2-ctA">
+                                                    <rect key="frame" x="113" y="95" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </tableViewCellContentView>
@@ -910,7 +946,7 @@
                         <viewControllerLayoutGuide type="bottom" id="DEe-gI-zJD"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="apA-7d-YvA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" canCancelContentTouches="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GIY-v1-IxD">
@@ -929,19 +965,8 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="badge1.png" translatesAutoresizingMaskIntoConstraints="NO" id="b76-31-Vaw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="b76-31-Vaw" firstAttribute="leading" secondItem="zhA-l1-5WN" secondAttribute="leading" id="2LN-ks-UDe"/>
-                                            <constraint firstAttribute="bottom" secondItem="b76-31-Vaw" secondAttribute="bottom" id="EaY-x0-D2G"/>
-                                            <constraint firstAttribute="trailing" secondItem="b76-31-Vaw" secondAttribute="trailing" id="Qf4-iI-BNw"/>
-                                            <constraint firstItem="b76-31-Vaw" firstAttribute="top" secondItem="zhA-l1-5WN" secondAttribute="top" id="ZEE-Xa-F9b"/>
-                                        </constraints>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="G04-FV-9Q0">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -949,19 +974,8 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="script_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="n9C-1a-oDf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="n9C-1a-oDf" firstAttribute="leading" secondItem="G04-FV-9Q0" secondAttribute="leading" id="6Zm-Nc-wZW"/>
-                                            <constraint firstAttribute="bottom" secondItem="n9C-1a-oDf" secondAttribute="bottom" id="G2L-vq-6s4"/>
-                                            <constraint firstAttribute="trailing" secondItem="n9C-1a-oDf" secondAttribute="trailing" id="cab-3Q-JQF"/>
-                                            <constraint firstItem="n9C-1a-oDf" firstAttribute="top" secondItem="G04-FV-9Q0" secondAttribute="top" id="iYl-lc-gA6"/>
-                                        </constraints>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dcG-8d-Kcz">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -969,19 +983,8 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toolbox_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="VZQ-8z-2bg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="VZQ-8z-2bg" secondAttribute="trailing" id="4GP-jv-qeO"/>
-                                            <constraint firstItem="VZQ-8z-2bg" firstAttribute="leading" secondItem="dcG-8d-Kcz" secondAttribute="leading" id="Ala-O9-SJj"/>
-                                            <constraint firstItem="VZQ-8z-2bg" firstAttribute="top" secondItem="dcG-8d-Kcz" secondAttribute="top" id="ovB-ac-LK2"/>
-                                            <constraint firstAttribute="bottom" secondItem="VZQ-8z-2bg" secondAttribute="bottom" id="wuH-Xg-kdi"/>
-                                        </constraints>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EsU-zB-RN9">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -989,19 +992,8 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="4BU-TC-ncS">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="4BU-TC-ncS" firstAttribute="leading" secondItem="EsU-zB-RN9" secondAttribute="leading" id="Mf3-tr-wR4"/>
-                                            <constraint firstItem="4BU-TC-ncS" firstAttribute="top" secondItem="EsU-zB-RN9" secondAttribute="top" id="YKr-BW-8Rn"/>
-                                            <constraint firstAttribute="bottom" secondItem="4BU-TC-ncS" secondAttribute="bottom" id="YLQ-Ud-Po3"/>
-                                            <constraint firstAttribute="trailing" secondItem="4BU-TC-ncS" secondAttribute="trailing" id="k3u-q4-7ao"/>
-                                        </constraints>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="KSK-rf-vi8">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1009,20 +1001,8 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="experiments_badge.png" translatesAutoresizingMaskIntoConstraints="NO" id="DaD-g8-38p">
-                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <constraints>
-                                            <constraint firstItem="DaD-g8-38p" firstAttribute="leading" secondItem="KSK-rf-vi8" secondAttribute="leading" id="NeX-jA-fKO"/>
-                                            <constraint firstAttribute="bottom" secondItem="DaD-g8-38p" secondAttribute="bottom" id="bIv-Us-yiK"/>
-                                            <constraint firstItem="DaD-g8-38p" firstAttribute="top" secondItem="KSK-rf-vi8" secondAttribute="top" id="nEe-QO-jtD"/>
-                                            <constraint firstAttribute="trailing" secondItem="DaD-g8-38p" secondAttribute="trailing" id="tTv-87-I1l"/>
-                                        </constraints>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xCn-mS-25c">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1053,7 +1033,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yud-YH-yDe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="417.5"/>
+            <point key="canvasLocation" x="360" y="702"/>
         </scene>
     </scenes>
     <resources>
@@ -1067,7 +1047,6 @@
         <image name="bigcirclebetter.png" width="160" height="160"/>
         <image name="chatBubble.png" width="740" height="134"/>
         <image name="coffee_badge.png" width="128" height="128"/>
-        <image name="experiments_badge.png" width="128" height="128"/>
         <image name="humIcon2.png" width="217" height="202"/>
         <image name="lo7l2E3.png" width="270" height="183"/>
         <image name="pics.png" width="90" height="90"/>
@@ -1076,7 +1055,7 @@
         <image name="toolbox_badge.png" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oU0-pS-dez"/>
-        <segue reference="LAT-S7-KHp"/>
+        <segue reference="kbf-sh-4TM"/>
+        <segue reference="82j-qH-k3H"/>
     </inferredMetricsTieBreakers>
 </document>
