@@ -10,9 +10,15 @@ import UIKit
 
 
 
+
+
 class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-        var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/users")
+    var chatAry:[chatObject] = []
+    
+    var chatImagesDict = Dictionary<String, UIImage>()
+    
+    var ref = Firebase(url:"https://welearnhackpoly.firebaseio.com/chats/")
     var nearByPeople:[FireBaseUser] = []
     
     @IBOutlet var tableView: UITableView!
@@ -20,9 +26,32 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //    var questionIndexAry:QuestionIndexCell = ["test question 1", "test question 2"]
     
+    @IBOutlet var chatField: UITextField!
+    
+    
+    var profileID:String = ""
+    
+    
+    @IBAction func sendChat(sender: AnyObject) {
+        
+        profileID = rootUser.photo
+        
+        var chatRef = ref.childByAutoId()
+        
+    chatRef.setValue(["userID":rootUser.userID,"userName":rootUser.name,"userImage":rootUser.photo,"chatText":chatField.text])
+        
+        tableView.reloadData()
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        profileID = rootUser.photo
+        
+
         
         //        self.tableView.contentInset = UIEdgeInsetsMake(-35, 0, 0, 0)
         
@@ -32,18 +61,21 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         
         
-        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            var newUser: FireBaseUser =  FireBaseUser(name: " ", major: " ", photo: " ", bio: " ")
-            newUser.name = snapshot.value["first_name"] as NSString
-            newUser.email = snapshot.value["email"] as NSString
-            newUser.photo = snapshot.value["photoID"] as NSString
-            newUser.major = snapshot.value["major"] as NSString
-            newUser.bio = snapshot.value["bio"] as NSString
-            newUser.provider = snapshot.value["provider"] as NSString
-            newUser.rep = snapshot.value["rep"] as Int
-            self.nearByPeople.append(newUser)
+        ref.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            
+            let userID = snapshot.value["userID"] as? String
+            let userName = snapshot.value["userName"] as? String
+            let userImage = snapshot.value["userImage"] as? String
+            let chatText = snapshot.value["chatText"] as? String
+            
+            let chatObj = chatObject(id: userID, name: userName, image: userImage, text: chatText)
+            
+            self.chatAry.append(chatObj)
+            
+            self.tableView.reloadData()
             
         })
+        
         
     }
     
@@ -61,14 +93,25 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return chatAry.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("celltest", forIndexPath: indexPath) as ChatTableCell
         
+        var correctAryPosition = chatAry.count - indexPath.row - 1
+        
+        
         cell.backgroundColor = UIColor.clearColor()
         cell.contentView.backgroundColor = UIColor.clearColor()
+        
+        if (chatAry[correctAryPosition] == []) {
+            println("no data yet")
+        } else {
+        cell.profPictureView.profileID = chatAry[correctAryPosition].userImage
+            
+        cell.chatTextLabel?.text = chatAry[correctAryPosition].chatText
+        }
  
         return cell
     }

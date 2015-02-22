@@ -456,6 +456,9 @@
                                 <action selector="doneAddingProfile:" destination="4qP-gV-7mm" id="3SN-Mf-A8w"/>
                             </connections>
                         </barButtonItem>
+                        <connections>
+                            <outlet property="titleView" destination="4zf-kt-HMd" id="Gqf-3V-ItW"/>
+                        </connections>
                     </navigationItem>
                     <connections>
                         <outlet property="ActualNameField" destination="BN9-qI-J1Y" id="u0v-yp-4fT"/>
@@ -806,24 +809,55 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n72-yq-F53" id="rpp-dV-Puh">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ybg-72-xdh">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chatBubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="epF-vv-u0o">
+                                                    <rect key="frame" x="117" y="10" width="250" height="88"/>
+                                                </imageView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jR9-Wk-AEX" customClass="FBProfilePictureView">
                                                     <rect key="frame" x="8" y="10" width="88" height="88"/>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chatBubble.png" translatesAutoresizingMaskIntoConstraints="NO" id="epF-vv-u0o">
-                                                    <rect key="frame" x="104" y="10" width="263" height="88"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRu-MO-bcH">
-                                                    <rect key="frame" x="119" y="21" width="233" height="64"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="Kb9-G8-X6u"/>
+                                                        <constraint firstAttribute="height" constant="88" id="rG4-1i-e6R"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRu-MO-bcH">
+                                                    <rect key="frame" x="138" y="25" width="209" height="57"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="top" secondItem="rpp-dV-Puh" secondAttribute="topMargin" constant="2" id="0T4-et-oDI"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="leading" secondItem="jR9-Wk-AEX" secondAttribute="trailing" constant="21" id="6C8-t9-TAJ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="epF-vv-u0o" secondAttribute="bottom" constant="1" id="9Xq-uD-hpH"/>
+                                                <constraint firstItem="jR9-Wk-AEX" firstAttribute="leading" secondItem="rpp-dV-Puh" secondAttribute="leadingMargin" id="Ebt-OU-JzL"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="top" secondItem="vRu-MO-bcH" secondAttribute="bottom" constant="-71" id="OLA-WN-FHI"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="top" secondItem="vRu-MO-bcH" secondAttribute="bottom" constant="-72" id="Yyz-gY-e6u"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="epF-vv-u0o" secondAttribute="bottom" constant="1" id="Z0m-eD-fWr"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="trailing" secondItem="rpp-dV-Puh" secondAttribute="trailingMargin" id="ZqB-W5-UU3"/>
+                                                <constraint firstItem="vRu-MO-bcH" firstAttribute="leading" secondItem="epF-vv-u0o" secondAttribute="trailing" constant="-229" id="aV9-7A-V5s"/>
+                                                <constraint firstItem="jR9-Wk-AEX" firstAttribute="top" secondItem="rpp-dV-Puh" secondAttribute="topMargin" constant="2" id="fK9-IC-OXZ"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="top" secondItem="rpp-dV-Puh" secondAttribute="topMargin" constant="2" id="k7p-Yo-VFd"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="leading" secondItem="jR9-Wk-AEX" secondAttribute="trailing" constant="21" id="m3y-rj-EpR"/>
+                                                <constraint firstItem="vRu-MO-bcH" firstAttribute="leading" secondItem="epF-vv-u0o" secondAttribute="trailing" constant="-226" id="uwP-dd-XwT"/>
+                                                <constraint firstItem="epF-vv-u0o" firstAttribute="trailing" secondItem="rpp-dV-Puh" secondAttribute="trailingMargin" id="vFs-Lt-ygB"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="0T4-et-oDI"/>
+                                                    <exclude reference="9Xq-uD-hpH"/>
+                                                    <exclude reference="OLA-WN-FHI"/>
+                                                    <exclude reference="m3y-rj-EpR"/>
+                                                    <exclude reference="vFs-Lt-ygB"/>
+                                                    <exclude reference="uwP-dd-XwT"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="chatBubbleImage" destination="epF-vv-u0o" id="C1o-4y-p6g"/>
                                             <outlet property="chatTextLabel" destination="vRu-MO-bcH" id="QyB-XA-9Bf"/>
-                                            <outlet property="userImageView" destination="Ybg-72-xdh" id="Scn-k5-GIV"/>
+                                            <outlet property="profPictureView" destination="jR9-Wk-AEX" id="z53-8W-jDG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -833,7 +867,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Apz-Wz-zLg">
-                                <rect key="frame" x="270" y="520" width="89" height="30"/>
+                                <rect key="frame" x="270" y="558" width="89" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="&lt; Around Me">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -842,11 +876,28 @@
                                     <action selector="returnToAroundMe:" destination="XX7-bl-1An" eventType="touchUpInside" id="LGS-rE-r0T"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-ea-Onx">
+                                <rect key="frame" x="169" y="558" width="36" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendChat:" destination="XX7-bl-1An" eventType="touchUpInside" id="KXt-Sa-amy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Where are you studying?" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xHv-Jv-FnJ">
+                                <rect key="frame" x="45" y="520" width="314" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="chatField" destination="xHv-Jv-FnJ" id="6Cn-zK-Lpu"/>
                         <outlet property="tableView" destination="p30-6Y-eRa" id="vUz-eh-UKu"/>
                         <segue destination="4dY-Ys-Kh0" kind="presentation" identifier="returnToAroundMe" id="kbf-sh-4TM"/>
                     </connections>
@@ -909,7 +960,7 @@
         <image name="sciIcon2.png" width="210" height="219"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oU0-pS-dez"/>
-        <segue reference="xJI-Ls-86h"/>
+        <segue reference="82j-qH-k3H"/>
+        <segue reference="kbf-sh-4TM"/>
     </inferredMetricsTieBreakers>
 </document>

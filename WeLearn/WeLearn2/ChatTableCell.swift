@@ -10,8 +10,7 @@ import UIKit
 
 class ChatTableCell:UITableViewCell {
     
-    
-    @IBOutlet var userImageView: UIImageView!
+    @IBOutlet var profPictureView: FBProfilePictureView!
     @IBOutlet var chatTextLabel: UILabel!
     @IBOutlet var chatBubbleImage: UIImageView!
     
