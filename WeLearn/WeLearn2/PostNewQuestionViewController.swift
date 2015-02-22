@@ -13,7 +13,7 @@
 import AVFoundation
 import UIKit
 
-class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
     
     
     var activeDiscussionType = ""
@@ -259,7 +259,13 @@ class PostNewQuestionViewController: UIViewController,UIImagePickerControllerDel
         }
         return(outputStr)
     }
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
+    }
     
 }
 

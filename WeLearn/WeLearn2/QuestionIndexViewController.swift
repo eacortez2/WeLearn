@@ -43,7 +43,7 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         // Create a reference to a Firebase location
         var myRootRef = Firebase(url:defaultRef)
         
-            myRootRef.observeEventType(.ChildAdded, withBlock: { (snapshot) in
+            myRootRef.queryOrderedByKey().observeEventType(.ChildAdded, withBlock: { snapshot in
                 
                 println("now observing snapshot")
                 let tagLine = snapshot.value["tagLine"] as? String
@@ -52,17 +52,19 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
                 let timeStamp = snapshot.value["timeStamp"] as? String
                 let answeredStatus = "Unanswered"
                 let numReplies = 0
-                
+                })
+        
 //                var text:String
 //                text = snapshot.value["discussionText"]? as String
-                let userId = snapshot.value["userId"] as String
-                
-                let discussion = Discussion(text: "placeHolder text", tagLine: tagLine, sender: userName, imageStr: "", timeStamp: timeStamp!, subject: currentRef, posterID: userId)
+//                let userId = snapshot.value["userId"] as 
+        myRootRef.observeEventType(.Value, withBlock: { snapshot in
+                //let userId =
+                let discussion = Discussion(text: "placeHolder text", tagLine: "", sender: "", imageStr: "", timeStamp: "", subject: "", posterID: "")
                 
                 discussionAry.append(discussion)
                 
                 println(discussionAry)
-                
+            })
 //                self.messagesRefAry.append(snapshot.key)
 //                println(self.messagesRefAry)
 //                
@@ -78,7 +80,7 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
                 //Note that the strong self causes a memory leak!
 
                 self.tableView.reloadData()
-            })
+            
         
         
         
@@ -145,7 +147,7 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return discussionAry.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -155,16 +157,23 @@ class QuestionIndexViewController: UIViewController, UITableViewDelegate, UITabl
         println(discussionAry)
         
 //        cell.subjectLabel.text = discussionAry[indexPath.row].discussionText()
+        let test = discussionAry[indexPath.row] as Discussion
         
-        cell.taglineLabel.text = discussionAry[indexPath.row].tagLine()
+//        cell.taglineLabel.text = discussionAry[indexPath.row].tagLine()
+//        
+//        cell.posterNameLabel.text = discussionAry[indexPath.row].userName()
+//        
+//        cell.timeDateLabel.text = discussionAry[indexPath.row].timeStamp()
         
-        cell.posterNameLabel.text = discussionAry[indexPath.row].userName()
-        
-        cell.timeDateLabel.text = discussionAry[indexPath.row].timeStamp()
+        cell.taglineLabel.text = test.tagLine_
+        cell.posterNameLabel.text = test.userName_
+        cell.timeDateLabel.text = test.timeStamp_
         
         cell.answeredStatusLabel.text = "Unanswered"
         
         cell.numRepliesLabel.text = "0 replies"
+        
+        println(" FOR TEST\(cell.posterNameLabel.text)")
         
 
         
