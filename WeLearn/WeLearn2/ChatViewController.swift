@@ -12,7 +12,7 @@ import UIKit
 
 
 
-class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ChatViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate {
     
     var chatAry:[chatObject] = []
     
@@ -123,6 +123,13 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.performSegueWithIdentifier("returnToAroundMe", sender: self)
         
+    }
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
     
 }
