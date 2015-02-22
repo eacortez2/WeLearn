@@ -30,6 +30,7 @@
 		296A53C51A993C2100FACDAD /* path3941.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A53C21A993C2100FACDAD /* path3941.png */; };
 		296A53C71A993C2D00FACDAD /* pathLOGOpng.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A53C61A993C2D00FACDAD /* pathLOGOpng.png */; };
 		296A53C91A993C9200FACDAD /* NewSplashBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 296A53C81A993C9200FACDAD /* NewSplashBackground.png */; };
+		296A53CB1A9956F000FACDAD /* chatObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 296A53CA1A9956F000FACDAD /* chatObject.swift */; };
 		29E006471A98C0D100F123F1 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E006461A98C0D100F123F1 /* ChatCell.swift */; };
 		74347D501A9913F500EB0418 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		74347D541A99143400EB0418 /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -104,6 +105,7 @@
 		296A53C21A993C2100FACDAD /* path3941.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = path3941.png; sourceTree = "<group>"; };
 		296A53C61A993C2D00FACDAD /* pathLOGOpng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pathLOGOpng.png; sourceTree = "<group>"; };
 		296A53C81A993C9200FACDAD /* NewSplashBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewSplashBackground.png; sourceTree = "<group>"; };
+		296A53CA1A9956F000FACDAD /* chatObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatObject.swift; sourceTree = "<group>"; };
 		29E006461A98C0D100F123F1 /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		747892D81A987AAE00121CAC /* confirmAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confirmAccountViewController.swift; sourceTree = "<group>"; };
 		747892E41A98983C00121CAC /* AroundMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AroundMeViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				74C6691F1A98D9E4008D5BA8 /* UniversityPickerViewController.swift */,
 				2966F8CD1A98D3EB003C96C5 /* ChatTableCell.swift */,
 				292D30261A991CB300BCF2A7 /* Discussion.swift */,
+				296A53CA1A9956F000FACDAD /* chatObject.swift */,
 			);
 			path = WeLearn2;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296A53CB1A9956F000FACDAD /* chatObject.swift in Sources */,
 				89D727071A991DE90024F1A0 /* confirmAccountViewController.swift in Sources */,
 				2958BC2E1A98B4B40036FE47 /* ChatViewController.swift in Sources */,
 				2958BC281A9892220036FE47 /* PostNewQuestionViewController.swift in Sources */,

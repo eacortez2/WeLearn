@@ -20,6 +20,8 @@ class ProfileViewController: UITableViewController {
     var bio: String = ""
     var major: String = ""
     
+    @IBOutlet weak var backgroundProfileImage: FBProfilePictureView!
+    
     @IBAction func goBackFromProfileToMatches(sender: AnyObject) {
         
         self.performSegueWithIdentifier("returnToAroundMeFromChat", sender: self)
@@ -42,10 +44,22 @@ class ProfileViewController: UITableViewController {
 
         
         super.viewDidLoad()
+        
+        //blureffect
+        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight)) as UIVisualEffectView
+        
+        visualEffectView.frame = backgroundProfileImage.bounds
+        
+        //above the bottom profile pic
+        backgroundProfileImage.insertSubview(visualEffectView, atIndex: 1)
+        
+        backgroundProfileImage.profileID = profileID
         profileImage.profileID = profileID
         nameLabel.text = name
         bioLabel.text = bio
         majorLabel.text = major
+        
+        profileImage.layer.cornerRadius = 80.0
 //        profileImage.profileID = profile.userID
 //        nameLabel.text = profile.name
 //        bioLabel.text = profile.bio
